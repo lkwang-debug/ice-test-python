@@ -1,0 +1,14 @@
+{
+  "requestId": "user.updateUserInfo-1774000264885",
+  "className": "user",
+  "methodName": "updateUserInfo",
+  "params": {
+    "nickName": "yy",
+    "tel": "12345",
+    "sex": "男",
+    "mobile": "13674832208",
+    "mail": "yy163",
+    "userId": 1000000001
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

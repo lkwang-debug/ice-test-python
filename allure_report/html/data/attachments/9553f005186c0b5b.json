@@ -1,0 +1,13 @@
+{
+  "requestId": "device.registerService-1774000263783",
+  "className": "device",
+  "methodName": "registerService",
+  "params": {
+    "deviceId": "meeting2",
+    "srvAppId": 11,
+    "srvName": "FMConfSrv",
+    "state": 1,
+    "srvAddress": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

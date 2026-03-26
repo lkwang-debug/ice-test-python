@@ -1,0 +1,9 @@
+{
+  "actual_result": {
+    "pullUrl": "[{\"type\":\"hls\",\"url\":\"http://192.168.6.134:20229/live/${user_id}-${video_type}-${video_id}-${timestamp}.flv?viewerId=${viewer_id}\"}]",
+    "pushUrl": "[{\"type\":\"rtmp\",\"url\":\"rtmp://192.168.6.134:20231/live/${user_id}-${video_type}-${video_id}-${timestamp}\"}]",
+    "resultCode": 0
+  },
+  "elapsed_ms": 2.000093460083008,
+  "timestamp": "2026-03-20 17:51:04"
+}

@@ -1,0 +1,22 @@
+{
+  "actual_result": {
+    "result": 0,
+    "businessName": "Default",
+    "enableData": "1",
+    "enableAudio": "1",
+    "enableVideo": "1",
+    "wndMode": "0",
+    "audioBrdCount": 256,
+    "videoBrdCount": 256,
+    "videoRcvCountChair": 256,
+    "videoRcvCountAttender": 256,
+    "videoWidth": 3840,
+    "videoHeight": 2160,
+    "videoFrameRate": 30,
+    "videoBitrate": 3000,
+    "supportRecord": 100,
+    "resultCode": 0
+  },
+  "elapsed_ms": 4.005193710327148,
+  "timestamp": "2026-03-20 17:51:02"
+}

@@ -1,0 +1,10 @@
+{
+  "requestId": "file.renameFile-1774000265088",
+  "className": "file",
+  "methodName": "renameFile",
+  "params": {
+    "roomid": 10000,
+    "docName": "testlink"
+  },
+  "timestamp": "2026-03-20 17:51:05"
+}

@@ -1,0 +1,9 @@
+{
+  "requestId": "room.getRoomInviteCode-1774000264438",
+  "className": "room",
+  "methodName": "getRoomInviteCode",
+  "params": {
+    "roomId": 12345
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

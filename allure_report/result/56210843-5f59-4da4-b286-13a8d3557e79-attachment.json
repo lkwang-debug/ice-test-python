@@ -1,0 +1,9 @@
+{
+  "requestId": "device.getServiceList-1774000263492",
+  "className": "device",
+  "methodName": "getServiceList",
+  "params": {
+    "devId": "MainDev"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

@@ -1,0 +1,44 @@
+{
+  "actual_result": {
+    "data": [
+      {
+        "serviceId": 4,
+        "serviceAppId": 20,
+        "serviceName": "FMFrontSrv",
+        "serviceAddress": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;",
+        "serviceStatus": "0"
+      },
+      {
+        "serviceId": 5,
+        "serviceAppId": 3,
+        "serviceName": "FMFileSrv",
+        "serviceAddress": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;",
+        "serviceStatus": "0"
+      },
+      {
+        "serviceId": 6,
+        "serviceAppId": 10,
+        "serviceName": "FMFileMgrSrv",
+        "serviceAddress": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;",
+        "serviceStatus": "0"
+      },
+      {
+        "serviceId": 7,
+        "serviceAppId": 11,
+        "serviceName": "FMConfSrv",
+        "serviceAddress": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;",
+        "serviceStatus": "0"
+      },
+      {
+        "serviceId": 11,
+        "serviceAppId": 65528,
+        "serviceName": "FMWebProxy",
+        "serviceAddress": "ws://192.168.6.132:28080/ngproxy/ws/webproxy/",
+        "serviceStatus": "0"
+      }
+    ],
+    "resultCode": 0
+  },
+  "elapsed_ms": 5.003452301025391,
+  "timestamp": "2026-03-20 17:51:03"
+}

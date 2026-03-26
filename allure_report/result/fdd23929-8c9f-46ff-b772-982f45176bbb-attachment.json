@@ -1,0 +1,13 @@
+{
+  "requestId": "room.replaceRoomRoute-1774000264687",
+  "className": "room",
+  "methodName": "replaceRoomRoute",
+  "params": {
+    "roomId": 10000,
+    "svrAppId": 11,
+    "svrNodeId": "NID:994690$DID:meeting2",
+    "svrAddress": null,
+    "svrAuthCode": "q6nSo60K"
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

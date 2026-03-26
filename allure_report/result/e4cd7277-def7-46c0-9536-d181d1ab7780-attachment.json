@@ -1,0 +1,11 @@
+{
+  "requestId": "user.verifyUser-1774000264930",
+  "className": "user",
+  "methodName": "verifyUser",
+  "params": {
+    "nodeId": "${device_devRegister.response.devNodeId",
+    "loginType": 1,
+    "name": "hzk00"
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

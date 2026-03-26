@@ -1,0 +1,5 @@
+{
+  "nodeId": "00000",
+  "nodeCheckCode": "0",
+  "subNodeAddress": "${device_checkDevList.response.data.1.devIp}:1089;"
+}

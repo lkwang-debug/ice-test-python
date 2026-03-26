@@ -1,0 +1,13 @@
+{
+  "actual_result": {
+    "parentNodeId": "",
+    "parentNodeName": "",
+    "parentCheckCode": "",
+    "parentSrvAddress": "",
+    "parentStatus": 2,
+    "result": 0,
+    "resultCode": 0
+  },
+  "elapsed_ms": 2.0041465759277344,
+  "timestamp": "2026-03-20 17:51:03"
+}

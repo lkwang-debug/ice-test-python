@@ -1,0 +1,11 @@
+{
+  "requestId": "device.frontNodeRegister-1774000263291",
+  "className": "device",
+  "methodName": "frontNodeRegister",
+  "params": {
+    "nodeId": 386619,
+    "nodeCheckCode": "0",
+    "subNodeAddress": "192.168.6.132;192.168.6.132:1089;"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

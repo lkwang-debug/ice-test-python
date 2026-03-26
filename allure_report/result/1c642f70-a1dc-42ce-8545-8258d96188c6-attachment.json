@@ -1,0 +1,9 @@
+{
+  "actual_result": {
+    "realRoomId": 12345,
+    "result": -5,
+    "resultCode": 0
+  },
+  "elapsed_ms": 1.9979476928710938,
+  "timestamp": "2026-03-20 17:51:04"
+}

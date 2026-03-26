@@ -1,0 +1,45 @@
+{
+  "actual_result": {
+    "data": [
+      {
+        "roomId": 10000,
+        "serviceAppId": 3,
+        "docId": "{a1968fb9-8583-41e5-8b03-f3ad467a22ba}",
+        "parentId": "{69bcfe59-01fe-4082-0100-000000000000}",
+        "docName": "testlink详细使用介绍",
+        "docType": 2,
+        "fileName": "testlink详细使用介绍",
+        "fileExt": "pptx",
+        "fileSize": 2636284,
+        "checkCode": 19811118,
+        "creatorId": 1000000011,
+        "fileWidth": 960,
+        "fileHeight": 720,
+        "subFileCount": 25,
+        "fileUrl": "{a1968fb9-8583-41e5-8b03-f3ad467a22ba}/777193591.jpg777193591.jpg",
+        "fileServiceId": 8
+      },
+      {
+        "roomId": 10000,
+        "serviceAppId": 3,
+        "docId": "{835e99c2-40f9-4274-b5ad-c4aaeb4c5c82}",
+        "parentId": "{69bcfe59-01fe-4082-0100-000000000000}",
+        "docName": "testlink详细使用介绍",
+        "docType": 2,
+        "fileName": "testlink详细使用介绍",
+        "fileExt": "pptx",
+        "fileSize": 2636284,
+        "checkCode": 19811118,
+        "creatorId": 1000000011,
+        "fileWidth": 960,
+        "fileHeight": 720,
+        "subFileCount": 25,
+        "fileUrl": "{835e99c2-40f9-4274-b5ad-c4aaeb4c5c82}/780370311.jpg780370311.jpg",
+        "fileServiceId": 8
+      }
+    ],
+    "resultCode": 0
+  },
+  "elapsed_ms": 4.999876022338867,
+  "timestamp": "2026-03-20 17:51:03"
+}

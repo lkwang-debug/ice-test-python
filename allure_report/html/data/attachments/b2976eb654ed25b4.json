@@ -1,0 +1,9 @@
+{
+  "requestId": "device.getVgwAddr-1774000263536",
+  "className": "device",
+  "methodName": "getVgwAddr",
+  "params": {
+    "devId": "MainDev"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

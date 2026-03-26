@@ -1,0 +1,9 @@
+{
+  "requestId": "device.getSystemParam-1774000263519",
+  "className": "device",
+  "methodName": "getSystemParam",
+  "params": {
+    "paramName": 1
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

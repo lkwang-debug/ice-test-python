@@ -1,0 +1,11 @@
+{
+  "requestId": "room.confRoomStart-1774000264079",
+  "className": "room",
+  "methodName": "confRoomStart",
+  "params": {
+    "serviceId": 3,
+    "roomId": null,
+    "groupId": "{690ae437-39b4-f9f6-0800-000000000000}"
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

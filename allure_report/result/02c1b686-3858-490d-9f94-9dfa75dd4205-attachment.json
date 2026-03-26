@@ -1,0 +1,28 @@
+{
+  "actual_result": {
+    "globalSwitch": 1,
+    "autoRecord": 0,
+    "autoAudit": 0,
+    "videoResolution": 2,
+    "recordMode": 1,
+    "videoDisplayMode": 3,
+    "dataDisplayMode": 3,
+    "recordFileSlice": 1,
+    "sliceInterval": 60,
+    "endRecordInterval": 60,
+    "waterMarkMode": 0,
+    "waterMarkLocation": 0,
+    "timestampInfo": "{\"location\":3}",
+    "layoutCodes": [
+      "default_video_1",
+      "data_video_ud_auto"
+    ],
+    "liveRecordMode": 0,
+    "enableServerRecord": true,
+    "recordLayoutMode": 1,
+    "enableExtFullRecord": false,
+    "resultCode": 0
+  },
+  "elapsed_ms": 4.004001617431641,
+  "timestamp": "2026-03-20 17:51:04"
+}

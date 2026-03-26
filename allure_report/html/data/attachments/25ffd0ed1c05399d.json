@@ -1,0 +1,11 @@
+{
+  "requestId": "room.getRoomRouteInfo-1774000264621",
+  "className": "room",
+  "methodName": "getRoomRouteInfo",
+  "params": {
+    "roomId": 12345,
+    "svrAppId": 11,
+    "svrNodeId": 386619
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

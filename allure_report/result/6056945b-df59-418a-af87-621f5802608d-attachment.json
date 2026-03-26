@@ -1,0 +1,11 @@
+{
+  "requestId": "device.updateMeetingLogInfo-1774000263972",
+  "className": "device",
+  "methodName": "updateMeetingLogInfo",
+  "params": {
+    "maxUser": 1,
+    "meetingId": null,
+    "roomId": 10000
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

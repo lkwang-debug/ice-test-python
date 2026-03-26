@@ -1,0 +1,10 @@
+{
+  "requestId": "room.getRoomCurDevId-1774000264367",
+  "className": "room",
+  "methodName": "getRoomCurDevId",
+  "params": {
+    "roomNodeId": "994690",
+    "roomId": 10000
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

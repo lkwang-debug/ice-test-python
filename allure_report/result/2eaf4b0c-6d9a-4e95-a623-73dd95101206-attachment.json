@@ -1,0 +1,9 @@
+{
+  "verifyCode": "1111",
+  "deviceAddress": "${device_checkDevList.response.data.0.devIp}:1089;",
+  "deviceType": 1,
+  "online": "0",
+  "bandWidth": 300000,
+  "roomCount": 1000,
+  "cpuLoad": 30
+}

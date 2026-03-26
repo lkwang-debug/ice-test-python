@@ -1,0 +1,7 @@
+{
+  "roomId": 10000,
+  "svrAppId": 11,
+  "svrNodeId": "NID:994690$DID:meeting2",
+  "svrAddress": null,
+  "svrAuthCode": "${RANDOM_STR}"
+}

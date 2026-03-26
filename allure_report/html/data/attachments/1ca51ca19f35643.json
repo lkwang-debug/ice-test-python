@@ -1,0 +1,6 @@
+{
+  "nodeId": "${device_devRegister.response.devNodeId}",
+  "loginType": 1,
+  "name": "hzk00",
+  "password": "admin123"
+}

@@ -1,0 +1,5 @@
+{
+  "devId": "license",
+  "serverType": 12,
+  "address": "${device_getServiceList.response.data.0.serviceAddress}"
+}

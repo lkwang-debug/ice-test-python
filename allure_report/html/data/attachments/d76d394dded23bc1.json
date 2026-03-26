@@ -1,0 +1,14 @@
+{
+  "actual_result": {
+    "devNodeId": "386619",
+    "backDev": "",
+    "priority": 2,
+    "maxOnline": 1000,
+    "maxBandWidth": 100000,
+    "roomMaxUserCount": 1000,
+    "result": -10,
+    "resultCode": 0
+  },
+  "elapsed_ms": 5.999088287353516,
+  "timestamp": "2026-03-20 17:51:03"
+}

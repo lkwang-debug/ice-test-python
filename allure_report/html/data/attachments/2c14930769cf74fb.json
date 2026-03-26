@@ -1,0 +1,11 @@
+{
+  "requestId": "device.tryChangeToMaster-1774000263873",
+  "className": "device",
+  "methodName": "tryChangeToMaster",
+  "params": {
+    "devId": "license",
+    "serverType": 12,
+    "address": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

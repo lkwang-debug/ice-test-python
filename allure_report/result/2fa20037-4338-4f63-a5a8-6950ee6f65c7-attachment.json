@@ -1,0 +1,12 @@
+{
+  "actual_result": {
+    "roomId": 10000,
+    "svrAppId": 11,
+    "svrNodeId": "NID:386619$DID:meeting2",
+    "svrAddress": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;",
+    "svrAuthCode": "1TEbIZ8i",
+    "resultCode": 0
+  },
+  "elapsed_ms": 63.99989128112793,
+  "timestamp": "2026-03-20 17:51:04"
+}

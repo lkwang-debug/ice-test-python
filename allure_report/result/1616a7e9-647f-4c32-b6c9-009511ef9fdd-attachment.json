@@ -1,0 +1,9 @@
+{
+  "requestId": "device.setDocumentConversionSwitch-1774000263803",
+  "className": "device",
+  "methodName": "setDocumentConversionSwitch",
+  "params": {
+    "globalSwitch": false
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

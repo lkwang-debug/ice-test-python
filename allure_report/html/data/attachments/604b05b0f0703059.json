@@ -1,0 +1,10 @@
+{
+  "requestId": "device.updateSystemParam-1774000263996",
+  "className": "device",
+  "methodName": "updateSystemParam",
+  "params": {
+    "paramName": "RecordServerIP",
+    "paramValue": "192.168.6.140"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

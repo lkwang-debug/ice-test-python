@@ -1,0 +1,10 @@
+{
+  "requestId": "device.setNodeStatus-1774000263820",
+  "className": "device",
+  "methodName": "setNodeStatus",
+  "params": {
+    "status": 0,
+    "nodeId": 386619
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

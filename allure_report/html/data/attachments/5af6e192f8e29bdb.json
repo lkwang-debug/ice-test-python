@@ -1,0 +1,5 @@
+{
+  "roomId": 10000,
+  "svrAppId": 123,
+  "svrNodeId": "${device_getNodeList.response.data.0.nodeId}"
+}

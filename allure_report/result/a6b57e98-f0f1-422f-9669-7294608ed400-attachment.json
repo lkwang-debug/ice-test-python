@@ -1,0 +1,9 @@
+{
+  "requestId": "user.getFaceUserInfo-1774000264951",
+  "className": "user",
+  "methodName": "getFaceUserInfo",
+  "params": {
+    "faceId": 1
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

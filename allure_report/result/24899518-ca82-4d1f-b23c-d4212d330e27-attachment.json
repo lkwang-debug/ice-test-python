@@ -1,0 +1,9 @@
+{
+  "actual_result": {
+    "svrAddress": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;",
+    "svrAuthCode": "1TEbIZ8i",
+    "resultCode": 0
+  },
+  "elapsed_ms": 2.0041465759277344,
+  "timestamp": "2026-03-20 17:51:04"
+}

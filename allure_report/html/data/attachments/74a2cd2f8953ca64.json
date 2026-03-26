@@ -1,0 +1,9 @@
+{
+  "requestId": "room.requestChairRight-1774000264528",
+  "className": "room",
+  "methodName": "requestChairRight",
+  "params": {
+    "password": "123456"
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

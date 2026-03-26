@@ -1,0 +1,9 @@
+{
+  "requestId": "device.getNodeIdByLocal-1774000263463",
+  "className": "device",
+  "methodName": "getNodeIdByLocal",
+  "params": {
+    "isLocal": "test"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

@@ -1,0 +1,9 @@
+{
+  "requestId": "device.getDevInfoByType-1774000263413",
+  "className": "device",
+  "methodName": "getDevInfoByType",
+  "params": {
+    "devType": 1
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

@@ -1,0 +1,10 @@
+{
+  "requestId": "file.delDir-1774000264990",
+  "className": "file",
+  "methodName": "delDir",
+  "params": {
+    "docId": "{8de2008b}",
+    "roomid": 10000
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

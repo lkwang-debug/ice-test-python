@@ -1,0 +1,9 @@
+{
+  "requestId": "room.updateRoomInfoByRoomId-1774000264788",
+  "className": "room",
+  "methodName": "updateRoomInfoByRoomId",
+  "params": {
+    "curUserCount": 0
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

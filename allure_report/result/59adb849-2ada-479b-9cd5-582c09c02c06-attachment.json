@@ -1,0 +1,10 @@
+{
+  "requestId": "device.changeToSlave-1774000263055",
+  "className": "device",
+  "methodName": "changeToSlave",
+  "params": {
+    "serverType": "2",
+    "devId": "hzktest"
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

@@ -1,0 +1,7 @@
+{
+  "roomId": 10000,
+  "svrAppId": 11,
+  "svrNodeId": null,
+  "svrAddress": "${device_getServiceList.response.data.0.serviceAddress}",
+  "svrAuthCode": "${RANDOM_STR}"
+}

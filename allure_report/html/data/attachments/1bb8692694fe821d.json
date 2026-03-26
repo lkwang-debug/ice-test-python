@@ -1,0 +1,4 @@
+{
+  "address": null,
+  "nodeId": "${device_devRegister.response.devNodeId}"
+}

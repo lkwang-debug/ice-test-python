@@ -1,0 +1,16 @@
+{
+  "requestId": "device.devRegister-1774000263192",
+  "className": "device",
+  "methodName": "devRegister",
+  "params": {
+    "deviceId": "MainDev",
+    "verifyCode": "1111",
+    "deviceAddress": "192.168.6.132;192.168.6.132:1089;",
+    "deviceType": 1,
+    "online": "0",
+    "bandWidth": 500000,
+    "roomCount": 1000,
+    "cpuLoad": 20
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

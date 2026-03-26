@@ -1,0 +1,9 @@
+{
+  "requestId": "room.getCDNInfo-1774000264795",
+  "className": "room",
+  "methodName": "getCDNInfo",
+  "params": {
+    "roomId": 10000
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

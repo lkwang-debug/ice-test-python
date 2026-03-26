@@ -1,0 +1,9 @@
+{
+  "requestId": "user.getUserRole-1774000264856",
+  "className": "user",
+  "methodName": "getUserRole",
+  "params": {
+    "userId": null
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

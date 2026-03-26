@@ -1,0 +1,10 @@
+{
+  "actual_result": {
+    "companyId": 1,
+    "businessId": 1,
+    "result": 0,
+    "resultCode": 0
+  },
+  "elapsed_ms": 3.0031204223632812,
+  "timestamp": "2026-03-20 17:51:04"
+}

@@ -1,0 +1,9 @@
+{
+  "serviceId": 3,
+  "roomId": 10000,
+  "userId": 1000000001,
+  "userName": "admin00",
+  "userType": 1,
+  "terminalType": 21,
+  "roomPassword": ""
+}

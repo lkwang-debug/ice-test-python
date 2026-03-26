@@ -1,0 +1,9 @@
+{
+  "requestId": "user.getRecordUserName-1774000264833",
+  "className": "user",
+  "methodName": "getRecordUserName",
+  "params": {
+    "userId": 1000000001
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

@@ -1,0 +1,16 @@
+{
+  "requestId": "device.devUpdate2-1774000263133",
+  "className": "device",
+  "methodName": "devUpdate2",
+  "params": {
+    "verifyCode": "1111",
+    "cpuLoad": 10,
+    "deviceId": "meeting2",
+    "deviceAddress": "192.168.6.133;192.168.6.133",
+    "online": "0",
+    "bandWidth": 500000,
+    "roomCount": 1000,
+    "memLoad": 67
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

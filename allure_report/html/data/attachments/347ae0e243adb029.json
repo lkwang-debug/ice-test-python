@@ -1,0 +1,318 @@
+{
+  "actual_result": {
+    "getRoomDeptList2": [
+      {
+        "departId": 1,
+        "departName": "TT测试环境",
+        "departType": 0,
+        "parentDepartId": 0,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 2,
+        "departName": "研发中心ADF",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 3,
+        "departName": "财务中心",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 4,
+        "departName": "测试部222",
+        "departType": 0,
+        "parentDepartId": 2,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 7,
+        "departName": "ZVc7kIZCiDFn_33aNBiOEXtF",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 8,
+        "departName": "iIzEkAcy60PiPUmCwTEdZ",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 9,
+        "departName": "35dYFe8b",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 11,
+        "departName": "QDFF1NNxUPhVx",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 12,
+        "departName": "U",
+        "departType": 0,
+        "parentDepartId": 13,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 13,
+        "departName": "Gur",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 14,
+        "departName": "cscjpIlWdmSXTzxsaeCyZOfbfqMmpiBz",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 15,
+        "departName": "gn433qHct",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 16,
+        "departName": "tZ88GwBrJBgzNApwnDG6",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 17,
+        "departName": "K9",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 18,
+        "departName": "K9",
+        "departType": 0,
+        "parentDepartId": 17,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 19,
+        "departName": "PaKhtdlp1K2PcAdHtRQ38BHTTtIn",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 20,
+        "departName": "PaKhtdlp1K2PcAdHtRQ38BHTTtIn",
+        "departType": 0,
+        "parentDepartId": 19,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 21,
+        "departName": "Gm2cTmsBVukKDpDPhbVUeKe",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 22,
+        "departName": "啶庮差僰煩巟斺曚硰馰鱏槬稰班梀輅摇斬燇帺魑葦勰淺蒤丝鳳庯嚥諟惍哢匢琎鉞婈譊湓虣饽鸼駱瞲郮斺挡潲枟鰋籃驡胰拠乖库翎轏髮栚綣蛊鏨虿蓤瀯筶鯶漯蚧洱廀怸涫湨骵葰潔羪绘嫚钍蛉靹榥星跹彜屾罓榙劇嵴煙檷牽浀塶羘恿踛嗍鯜萤蚋枒弌膦坒龔碬溼惯鮩豿紬呵销躝埱勇劭悎江毘扒赅鰖鐴",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 23,
+        "departName": "`燅1盋￝=`ﾂ?_",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 24,
+        "departName": "IDBgaqOFKwCTXOqxhBOBoqcxmOQPDyvR",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 25,
+        "departName": "梕擬泌沴銊蜷钨剴尳鐎彄凞壥噶騏镒怠峹曞蝦筣揣盻訉说奿虯曛塶桦醳盫",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 26,
+        "departName": "992373125784529305467783580857",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 27,
+        "departName": "cE4sFGH4528ulSx_GTDbrmomL",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 28,
+        "departName": "NWDcOTwxeL9rl",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 29,
+        "departName": "G1ui49R_kkGLF",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 30,
+        "departName": "Q4aZ",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 32,
+        "departName": "Wto6cSriST7a_iEYZoNtuzB",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 33,
+        "departName": "LFS56",
+        "departType": 0,
+        "parentDepartId": 34,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 34,
+        "departName": "0S0gT8jJl1pDQpay9dDbk5D6wOT",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 35,
+        "departName": "dlWGkVuvPDkXYOaEeJgPTCulNuJVRQhj",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 36,
+        "departName": "LUIpkxaQ8RVL9SjzAEIqXxFgmdFp2m4",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 37,
+        "departName": "xSLw4wg_3QZol",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 38,
+        "departName": "HGRQsyeTgnyGRpB1TIb",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 39,
+        "departName": "HGRQsyeTgnyGRpB1TIb",
+        "departType": 0,
+        "parentDepartId": 38,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 40,
+        "departName": "PMbCp3HFFkr7MQKbXhnKH",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 41,
+        "departName": "PMbCp3HFFkr7MQKbXhnKH",
+        "departType": 0,
+        "parentDepartId": 40,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 42,
+        "departName": "T5m4i9lU1mi9LDStC",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 43,
+        "departName": "咢薢瞓籁怱硇踥鴟箦滄蓶白罟栂咕鼗押軠暟熩棣免庾釶擪酠霯椹褨戟馡卞烱娼熜諁敢逩玎稒酇腗鶝邿讀侬嶱晊寚沰九飷傂鱡甭屗蒚阖賹丂怡鄕錝斶僌乄鼍名揊厢奠陡常量菤氏鬇罆班搘羮设锩偃慛橛鳢辏惒懚陲猎棬鞵貛寉茜嘅錖脪衋帥臉滲隹擯鉜仹崛撷嶷渇醚祩揃静衸莣誚郦榯欛蠁捻瑌闈亣蹋",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 44,
+        "departName": "Ｄ-Ｓﾋ-蝵ﾚｆ￤厙",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 45,
+        "departName": "XAYpJMcZrGuPLuYJawUQxZRrfVgHEKUu",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 46,
+        "departName": "衮儋犞捐娻鍡濐墉儅醪獚濕戎牟謩骨欖韇矆祢耚堝纭锋歲瑦屺敿诗隌榿惃",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 47,
+        "departName": "358806446760592803484965526231",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      },
+      {
+        "departId": 48,
+        "departName": "mIto7GpsP",
+        "departType": 0,
+        "parentDepartId": 1,
+        "nodeId": "386619"
+      }
+    ],
+    "departId": 1,
+    "resultCode": 0
+  },
+  "elapsed_ms": 16.240596771240234,
+  "timestamp": "2026-03-20 17:51:04"
+}

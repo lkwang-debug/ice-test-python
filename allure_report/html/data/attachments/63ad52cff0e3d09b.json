@@ -1,0 +1,11 @@
+{
+  "requestId": "room.delRoomRoute-1774000264736",
+  "className": "room",
+  "methodName": "delRoomRoute",
+  "params": {
+    "roomId": 10000,
+    "svrAppId": 11,
+    "svrNodeId": "TCP:192.168.6.132:1089;TCP:192.168.6.132:1089;"
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

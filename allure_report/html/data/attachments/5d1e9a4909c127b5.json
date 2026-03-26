@@ -1,0 +1,11 @@
+{
+  "requestId": "user.verifyUser-1774000264923",
+  "className": "user",
+  "methodName": "verifyUser",
+  "params": {
+    "nodeId": 386619,
+    "name": "hzk00",
+    "password": "admin123"
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

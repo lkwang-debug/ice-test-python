@@ -1,0 +1,9 @@
+{
+  "requestId": "room.getRealRoomId-1774000264044",
+  "className": "room",
+  "methodName": "getRealRoomId",
+  "params": {
+    "roomId": 10000
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}

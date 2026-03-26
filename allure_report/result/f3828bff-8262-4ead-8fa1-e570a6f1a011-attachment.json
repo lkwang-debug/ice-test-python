@@ -1,0 +1,13 @@
+{
+  "requestId": "device.registerService-1774000263799",
+  "className": "device",
+  "methodName": "registerService",
+  "params": {
+    "deviceId": null,
+    "srvAppId": 11,
+    "srvName": "FMConfSrv",
+    "state": 1,
+    "srvAddress": null
+  },
+  "timestamp": "2026-03-20 17:51:03"
+}

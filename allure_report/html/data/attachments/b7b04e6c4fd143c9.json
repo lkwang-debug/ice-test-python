@@ -1,0 +1,10 @@
+{
+  "requestId": "file.moveDocFile-1774000265051",
+  "className": "file",
+  "methodName": "moveDocFile",
+  "params": {
+    "roomid": 10000,
+    "parentId": "{687739bf-3dd5-d3da-0100-000000000000}"
+  },
+  "timestamp": "2026-03-20 17:51:05"
+}

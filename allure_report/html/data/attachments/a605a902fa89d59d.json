@@ -1,0 +1,10 @@
+{
+  "actual_result": {
+    "callBitrate": 5,
+    "videoMixMode": 0,
+    "videoNum": 9,
+    "resultCode": 0
+  },
+  "elapsed_ms": 1.1820793151855469,
+  "timestamp": "2026-03-20 17:51:04"
+}

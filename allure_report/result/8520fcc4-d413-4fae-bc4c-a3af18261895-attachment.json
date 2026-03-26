@@ -1,0 +1,10 @@
+{
+  "backDev": "",
+  "priority": 2,
+  "maxOnline": 1000,
+  "maxBandWidth": 100000,
+  "roomMaxUserCount": 1000,
+  "result": 0,
+  "status": "1",
+  "resultCode": 0
+}

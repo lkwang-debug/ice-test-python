@@ -1,0 +1,10 @@
+{
+  "requestId": "room.getRoomH323SettingsInfo-1774000264811",
+  "className": "room",
+  "methodName": "getRoomH323SettingsInfo",
+  "params": {
+    "roomId": 10000,
+    "devId": "h323gc1"
+  },
+  "timestamp": "2026-03-20 17:51:04"
+}
