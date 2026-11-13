@@ -1,5 +1,0 @@
-{
-  "nodeId": "${device_devRegister.response.devNodeId}",
-  "nodeCheckCode": "0",
-  "subNodeAddress": null
-}

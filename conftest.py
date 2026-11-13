@@ -89,3 +89,60 @@ def get_methods(request):
         "user": request.getfixturevalue("user_methods")
     }
     return lambda class_name: class_mapping.get(class_name.lower())
+
+
+def pytest_addoption(parser):
+    group = parser.getgroup("gateway")
+    group.addoption("--gateway-run", action="store_true", help="Execute live gateway tests")
+    group.addoption("--gateway-profile", help="Environment/resource profile JSON")
+    group.addoption("--gateway-host", help="Explicitly override the gateway host")
+    group.addoption("--gateway-topology", choices=["single", "dual"])
+    from common.config import TEST_CONFIG
+    group.addoption("--gateway-scope", choices=["read", "resource", "global"], default=TEST_CONFIG.get("scope", "global"))
+
+
+@pytest.fixture(scope="session")
+def gateway_runtime(request):
+    from common.runtime import GatewayRuntime, load_profile
+    if not request.config.getoption("--gateway-run"):
+        pytest.skip("Live tests are opt-in: python run.py; settings are in common/config.py")
+    profile = getattr(request.config, "_gateway_effective_profile", None) or load_profile(request.config.getoption("--gateway-profile"),
+                           request.config.getoption("--gateway-topology"),
+                           request.config.getoption("--gateway-host"))
+    runtime = GatewayRuntime(profile)
+    try:
+        details = runtime.preflight(request.config.getoption("--gateway-scope"))
+        from common.executor import attach
+        attach("Database environment", details)
+        report_dir = request.config.getoption("allure_report_dir", default=None)
+        if report_dir:
+            import json
+            output = Path(report_dir)
+            output.mkdir(parents=True, exist_ok=True)
+            values = {"Database": details["backend"], "Database.config": ", ".join(details.get("config_files", [])),
+                      "Database.client": str(details.get("container") or "host"), "Topology": runtime.topology}
+            output.joinpath("environment.properties").write_text(
+                "\n".join(key + "=" + value for key, value in values.items()) + "\n", encoding="utf-8")
+        yield runtime
+    finally:
+        runtime.close()
+
+
+@pytest.fixture
+def gateway_case(request, gateway_runtime):
+    from common.scenarios import Scenario
+    from common.executor import attach
+    case = request.param
+    gateway_runtime.check_case_applicability(case, request.config.getoption("--gateway-scope"))
+    scenario = Scenario(gateway_runtime, case)
+    try:
+        scenario.prepare()
+        yield scenario
+    finally:
+        try:
+            scenario.close()
+        except Exception as exc:
+            from common.outcomes import label_outcome
+            label_outcome("cleanup_failure", str(exc), {"case_id": case["case_id"]})
+            attach("Cleanup failure", {"case_id": case["case_id"], "error": str(exc)})
+            raise

@@ -1,0 +1,14 @@
+# 打包版实际需要的第三方依赖（最小集）
+#
+# 注意：根目录的 requirements.txt 是开发机的 pip freeze 全量快照，包含
+# tensorflow / keras / opencv / selenium / flask / robotframework / deepface 等，
+# 与本测试框架无关，装它会下载 2GB+ 且容易失败。打包请用本文件。
+#
+# 版本与开发机保持一致，避免行为差异。
+zeroc-ice==3.7.8
+pytest==7.3.1
+allure-pytest==2.13.2
+openpyxl==3.1.2
+PyMySQL==1.0.3
+paramiko==3.2.0
+PyYAML==6.0

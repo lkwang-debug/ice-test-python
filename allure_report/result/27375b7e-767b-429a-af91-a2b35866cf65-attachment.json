@@ -1,3 +1,0 @@
-{
-  "nodeId": "${device_devRegister.response.devNodeId}"
-}

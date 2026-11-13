@@ -1,9 +1,0 @@
-{
-  "requestId": "room.getRoomUserList-1774000264468",
-  "className": "room",
-  "methodName": "getRoomUserList",
-  "params": {
-    "roomId": 10000
-  },
-  "timestamp": "2026-03-20 17:51:04"
-}

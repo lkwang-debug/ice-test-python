@@ -1,9 +1,0 @@
-{
-  "requestId": "room.getRoomCurDevId-1774000264373",
-  "className": "room",
-  "methodName": "getRoomCurDevId",
-  "params": {
-    "roomNodeId": 386619
-  },
-  "timestamp": "2026-03-20 17:51:04"
-}

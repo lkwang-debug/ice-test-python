@@ -1,9 +1,0 @@
-{
-  "requestId": "company.getCompanyBusiness-1774000262979",
-  "className": "company",
-  "methodName": "getCompanyBusiness",
-  "params": {
-    "business": "123"
-  },
-  "timestamp": "2026-03-20 17:51:02"
-}

@@ -12,6 +12,14 @@ import Ice
 import allure
 from pathlib import Path
 from typing import Dict, Any
+
+# Ensure generated ICE packages are importable outside pytest/conftest too.
+project_root = Path(__file__).parent.parent.resolve()
+generated_dir = project_root / "generated"
+for path in (str(project_root), str(generated_dir)):
+    if path not in sys.path:
+        sys.path.insert(0, path)
+
 from generated.com.hst.proxy.service.common import CommonService as common_service
 #print("DEBUG: CommonService 是否有 _op_invoke：", hasattr(common_service.CommonService, "_op_invoke"))
 
@@ -20,6 +28,8 @@ from generated.com.hst.proxy.service.common import CommonService as common_servi
 
 
 from common.config import ICE_CONFIG
+from common.gateway_response import GatewayResult, decode_response
+from common.evidence import redact
 
 
 # 设置路径：插入 generated 的上一级目录（项目根目录）
@@ -33,8 +43,8 @@ sys.path.insert(0, str(project_root))
 
 
 #print("==== DEBUG: sys.path ====")
-for p in sys.path:
-    print(p)
+# for p in sys.path:
+#     print(p)
 #print("=========================")
 
 common_model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../generated/com/hst/proxy/model/CommonModel.py"))
@@ -56,6 +66,20 @@ except ImportError as e:
     )
 
 logger = logging.getLogger(__name__)
+
+
+CONNECT_FAIL_HINT = """
+============================================================
+ ICE 连接失败。请依次确认：
+   1) IceDBProxy 服务器是否已开通端口 20801/tcp 与 22000/tcp：
+        firewall-cmd --zone=public --add-port=20801/tcp --permanent
+        firewall-cmd --zone=public --add-port=22000/tcp --permanent
+        firewall-cmd --reload
+   2) common/config.py 的 host / locator_port 是否指向正确的服务器
+   3) 本机到该服务器的网络是否可达
+ 注意：端口不通不会报"端口"相关的错，只表现为连接失败，
+       很容易被误判成接口本身有问题。
+============================================================"""
 
 
 class IceClient:
@@ -123,14 +147,33 @@ class IceClient:
         except Ice.Exception as e:
             logger.error("ICE连接异常: %s", e, exc_info=True)
             self._log_ice_error(e)
+            self._log_connect_hint()
             self._cleanup()
             return False
         except Exception as e:
             logger.error("连接发生未知异常: %s", e, exc_info=True)
+            self._log_connect_hint()
             self._cleanup()
             return False
 
+    def _log_connect_hint(self):
+        """连接失败时补一条可操作的排查指引。
 
+        原行为是连接失败只记一行日志、返回 False，下游每条用例变成
+        resultCode: -999 —— 用例全红却看不出真正原因是端口不通。
+        这里只把提示补进日志和报告，connect() 的返回值契约保持不变
+        （method.py 里所有 BaseMethods.__init__ 都依赖它返回 bool）。
+        """
+        msg = f"{CONNECT_FAIL_HINT}\n  当前 locator: {self.locator}"
+        logger.error(msg)
+        allure.attach(msg, name="连接失败排查指引",
+                      attachment_type=allure.attachment_type.TEXT)
+
+
+
+    def _cleanup(self):
+        """Release partial ICE connection state after a failed connect."""
+        self.disconnect()
 
     def _test_connection(self):
         """发送 ping 请求测试连接"""
@@ -174,23 +217,37 @@ class IceClient:
 
 
     def invoke(self, class_name: str, method_name: str, params: Dict[str, Any], version: str = "1.0") -> Dict[str, Any]:
-        """调用接口"""
+        """Compatibility dictionary API; new tests consume invoke_result."""
+        return self.invoke_result(class_name, method_name, params, version).legacy()
+
+    def invoke_result(self, class_name, method_name, params, version="1.0"):
+        """Preserve both envelope codes, raw bytes, payload and request evidence."""
         if not self._connected:
             raise RuntimeError("ICE服务未连接")
 
         start_time = time.time()
-        request_id = f"{class_name}.{method_name}-{int(start_time * 1000)}"
+        import uuid
+        request_id = f"{class_name}.{method_name}-{uuid.uuid4().hex}"
 
         try:
             self._log_request(request_id, class_name, method_name, params)
             req = self._create_request(class_name, method_name, params, version)
             # 修改调用方式
             result_code, res = self.proxy.invoke(req, {})  # res作为返回值
-            return self._process_response(request_id, res, result_code, start_time)
+            result = decode_response(result_code, res, request_id, (time.time() - start_time) * 1000)
         except Ice.Exception as e:
-            return self._handle_ice_exception(e, request_id, start_time)
+            result = GatewayResult(None, None, None, b"", request_id,
+                                   (time.time() - start_time) * 1000, "ICE exception: " + str(e))
         except Exception as e:
-            return self._handle_generic_exception(e, request_id, start_time)
+            result = GatewayResult(None, None, None, b"", request_id,
+                                   (time.time() - start_time) * 1000, "Client exception: " + str(e))
+        self.last_call = result
+        allure.attach(json.dumps(result.evidence(), ensure_ascii=False, indent=2),
+                      name="ICE Response Envelope", attachment_type=allure.attachment_type.JSON)
+        logger.log(logging.ERROR if result.error or result.invoke_code or result.response_code else logging.INFO,
+                   "[%s] invoke_code=%r response_code=%r elapsed_ms=%.2f error=%r",
+                   request_id, result.invoke_code, result.response_code, result.elapsed_ms, result.error)
+        return result
 
 
     def _create_request(self, class_name, method_name, params, version) -> Request:
@@ -204,109 +261,12 @@ class IceClient:
             raise ValueError(f"参数序列化失败: {e}")
         return req
 
-    def _process_response(self, request_id, res: Response, code: int, start_time) -> Dict[str, Any]:
-
-        elapsed = (time.time() - start_time) * 1000
-
-        # 1. 处理调用失败的情况
-        if code != 0:
-            msg = f"调用失败，code={code}"
-            if res and res.result:
-                try:
-                    raw_msg = res.result.decode('utf-8').strip()
-                    msg += f"，响应内容: {raw_msg}"
-                except Exception as e:
-                    msg += f"，响应解码异常: {e}"
-            logger.error(f"[{request_id}] {msg}, 耗时: {elapsed:.2f}ms")
-            return {"resultCode": code, "message": msg}
-
-        # 2. 提取当前调用的接口标识（格式：class.method）
-        current_api = request_id.split('-')[0]  # 示例："device.delRoomRouteByTimer"
-
-        # 3. 尝试解析响应内容
-        try:
-            raw_data = res.result.decode('utf-8').strip()
-
-            # 3.1 处理非JSON响应
-            if not (raw_data.startswith('{') or raw_data.startswith('[')):
-                if raw_data.lower() in ("ok", "success"):
-                    return {"resultCode": 0, "message": raw_data}
-                return {"resultCode": 0, "data": raw_data}
-
-            # 3.2 正常JSON解析
-            data = json.loads(raw_data)
-            if not isinstance(data, dict):
-                data = {"data": data}
-
-            data["resultCode"] = res.resultCode  # 保留原始返回码
-            return data
-
-        except Exception as e:
-            msg = f"响应解析失败: {e}，原始内容: {res.result[:100] if res.result else '空'}"
-            logger.error(f"[{request_id}] {msg}")
-            return {"resultCode": -2, "message": msg}
-
-        # elapsed = (time.time() - start_time) * 1000
-        #
-        # # 1. 处理调用失败的情况
-        # if code != 0:
-        #     msg = f"调用失败，code={code}"
-        #     logger.error(f"[{request_id}] {msg}, 耗时: {elapsed:.2f}ms")
-        #     return {"resultCode": code, "message": msg}
-        #
-        # # 2. 定义允许空响应且视为成功的接口白名单
-        # EMPTY_RESPONSE_SUCCESS_APIS = {
-        #     "device.devUnRegister",
-        #     "device.delRoomRouteByTimer",
-        #     "room.getSvrNodeIdByRoomRoute"
-        # }
-        #
-        # # 3. 提取当前调用的接口标识（格式：class.method）
-        # current_api = request_id.split('-')[0]  # 示例："device.delRoomRouteByTimer"
-        #
-        # # 4. 处理空响应
-        # if not res.result or len(res.result) == 0:
-        #     if current_api in EMPTY_RESPONSE_SUCCESS_APIS:
-        #         logger.debug(f"[{request_id}] 允许空响应的接口，按成功处理")
-        #         return {"resultCode": 0, "message": "操作成功(空响应)"}
-        #     else:
-        #         msg = "接收到空响应"
-        #         logger.error(f"[{request_id}] {msg}")
-        #         return {"resultCode": -2, "message": msg}
-        #
-        # # 5. 尝试解析响应内容
-        # try:
-        #     raw_data = res.result.decode('utf-8').strip()
-        #
-        #     # 5.1 处理空字符串（二次检查）
-        #     if not raw_data:
-        #         if current_api in EMPTY_RESPONSE_SUCCESS_APIS:
-        #             return {"resultCode": 0, "message": "操作成功(空字符串)"}
-        #         return {"resultCode": -2, "message": "接收到空字符串响应"}
-        #
-        #     # 5.2 处理非JSON响应
-        #     if not (raw_data.startswith('{') or raw_data.startswith('[')):
-        #         if raw_data.lower() in ("ok", "success"):
-        #             return {"resultCode": 0, "message": raw_data}
-        #         return {"resultCode": 0, "data": raw_data}
-        #
-        #     # 5.3 正常JSON解析
-        #     data = json.loads(raw_data)
-        #     if not isinstance(data, dict):
-        #         data = {"data": data}
-        #
-        #     data["resultCode"] = res.resultCode  # 保留原始返回码
-        #     return data
-        #
-        # except Exception as e:
-        #     msg = f"响应解析失败: {e}，原始内容: {res.result[:100] if res.result else '空'}"
-        #     logger.error(f"[{request_id}] {msg}")
-        #     return {"resultCode": -2, "message": msg}
-
-
-
+    def _process_response(self, request_id, res: Response, code: int, start_time):
+        """Retained for older callers; decode_response is the single decoder."""
+        return decode_response(code, res, request_id, (time.time() - start_time) * 1000).legacy()
 
     def _log_request(self, request_id, class_name, method_name, params):
+        params = redact(params)
         msg = f"[{request_id}] 调用: {class_name}.{method_name}\n参数: {json.dumps(params, indent=2, ensure_ascii=False)}"
         logger.info(msg)
         allure.attach(

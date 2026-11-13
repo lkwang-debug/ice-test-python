@@ -1,5 +1,0 @@
-{
-  "roomId": 12345,
-  "svrAppId": 11,
-  "svrNodeId": "${device_getNodeList.response.data.0.nodeId}"
-}

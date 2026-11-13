@@ -1,0 +1,4536 @@
+[
+  {
+    "api": "company.checkMeetingLog",
+    "pdf_pages": [
+      2
+    ],
+    "case_ids": [
+      "company-005"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "company-005",
+        "scenario": "正确检查会议服务日志",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "company.getCompanyBusiness",
+    "pdf_pages": [
+      2
+    ],
+    "case_ids": [
+      "company-002",
+      "company-003",
+      "company-004"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "company-002",
+        "scenario": "正确获取公司业务信息",
+        "expected": {
+          "resultCode": 0,
+          "businessName": "Default",
+          "enableData": "1"
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "company-003",
+        "scenario": "获取公司业务信息，business传空",
+        "expected": {
+          "result": -9,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "business"
+        ]
+      },
+      {
+        "case_id": "company-004",
+        "scenario": "获取公司业务信息，business传非数字",
+        "expected": {
+          "result": -9,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.changeToSlave",
+    "pdf_pages": [
+      4
+    ],
+    "case_ids": [
+      "device-002",
+      "device-003",
+      "device-004"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-002",
+        "scenario": "正确切换主从设备,",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-003",
+        "scenario": "切换主从设备,输入不存在的devId和serverType",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-004",
+        "scenario": "切换主从设备,输入devId和serverType为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "serverType",
+          "devId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.checkDevList",
+    "pdf_pages": [
+      4
+    ],
+    "case_ids": [
+      "device-005",
+      "device-006",
+      "device-008"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-005",
+        "scenario": "正确检查设备列表-返回主节点且在线",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-006",
+        "scenario": "正确检查设备列表-返回主节点和子节点且在线",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-008",
+        "scenario": "正确检查设备列表-cpuLoad为10",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.delRoomRouteByTimer",
+    "pdf_pages": [
+      6
+    ],
+    "case_ids": [
+      "device-009"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-009",
+        "scenario": "正确删除定时路由信息",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.devRegister",
+    "pdf_pages": [
+      7
+    ],
+    "case_ids": [
+      "device-010",
+      "device-011",
+      "device-012",
+      "device-013",
+      "device-014"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-010",
+        "scenario": "设备注册-注册主节点",
+        "expected": {
+          "backDev": "",
+          "priority": 2,
+          "maxOnline": 1000,
+          "maxBandWidth": 100000,
+          "roomMaxUserCount": 1000,
+          "result": 0,
+          "status": "1",
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-011",
+        "scenario": "设备注册-注册子节点",
+        "expected": {
+          "backDev": "",
+          "priority": 2,
+          "maxOnline": 1000,
+          "maxBandWidth": 100000,
+          "roomMaxUserCount": 1000,
+          "result": 0,
+          "status": "1",
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-012",
+        "scenario": "设备注册-注册节点失败，result返回-10",
+        "expected": {
+          "result": -10,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-013",
+        "scenario": "设备注册-少参场景，不传deviceId",
+        "expected": {
+          "result": -10,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "request"
+        ]
+      },
+      {
+        "case_id": "device-014",
+        "scenario": "设备注册-传入错误的verifyCode",
+        "expected": {
+          "result": -10,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.devUnRegister",
+    "pdf_pages": [
+      8
+    ],
+    "case_ids": [
+      "device-015",
+      "device-016"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-015",
+        "scenario": "设备注销-注销主节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-016",
+        "scenario": "设备注销-注销子节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.devUpdate",
+    "pdf_pages": [
+      10
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "4.39 Dameng adaptation removed the old processor; devUpdate2 includes memLoad",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "Removed from current 4.39.7 code line; developer confirmed 2026-10-15",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null,
+    "replacement": "device.devUpdate2",
+    "lifecycle_change": "renamed",
+    "removal_commit": "a0cbc09"
+  },
+  {
+    "api": "device.devUpdate2",
+    "pdf_pages": [
+      9
+    ],
+    "case_ids": [
+      "device-007"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "primary_device_update_current_version",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-007",
+        "scenario": "更新子节点设备信息-cpuLoad为10",
+        "expected": {
+          "resultCode": 0,
+          "devName": "${env.secondary.device_id}"
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.frontGetParentNodeInfo",
+    "pdf_pages": [
+      11
+    ],
+    "case_ids": [
+      "device-017",
+      "device-018"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-017",
+        "scenario": "正确获取父节点信息",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-018",
+        "scenario": "获取父节点信息失败-localNodeId传空",
+        "expected": {
+          "resultCode": 0,
+          "result": -52
+        },
+        "intentional_invalid": [
+          "localNodeId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.frontNodeRegister",
+    "pdf_pages": [
+      12
+    ],
+    "case_ids": [
+      "device-022",
+      "device-023",
+      "device-024",
+      "device-025",
+      "device-026"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-022",
+        "scenario": "前端节点正常注册",
+        "expected": {
+          "resultCode": 0,
+          "result": -1
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-023",
+        "scenario": "前端节点异常注册-不传nodeId",
+        "expected": {
+          "resultCode": 0,
+          "result": -1
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      },
+      {
+        "case_id": "device-024",
+        "scenario": "前端节点异常注册-传不存在的nodeId",
+        "expected": {
+          "resultCode": 0,
+          "result": -1
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      },
+      {
+        "case_id": "device-025",
+        "scenario": "前端节点异常注册-nodeCheckCode传空",
+        "expected": {
+          "resultCode": 0,
+          "result": -1
+        },
+        "intentional_invalid": [
+          "nodeCheckCode"
+        ]
+      },
+      {
+        "case_id": "device-026",
+        "scenario": "前端节点异常注册-subNodeAddress传空",
+        "expected": {
+          "resultCode": 0,
+          "result": -1
+        },
+        "intentional_invalid": [
+          "subNodeAddress"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.frontNodeUnregister",
+    "pdf_pages": [
+      12
+    ],
+    "case_ids": [
+      "device-019",
+      "device-020",
+      "device-021"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-019",
+        "scenario": "前端节点正常注销",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-020",
+        "scenario": "前端节点异常注销-status为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "status"
+        ]
+      },
+      {
+        "case_id": "device-021",
+        "scenario": "前端节点异常注销-nodeId为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.frontStart",
+    "pdf_pages": [
+      13
+    ],
+    "case_ids": [
+      "device-027",
+      "device-028"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-027",
+        "scenario": "启用前端节点",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-028",
+        "scenario": "启用前端节点-nodeAddress为空",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": [
+          "nodeAddress"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getAllPhoneGwInfo",
+    "pdf_pages": [
+      14
+    ],
+    "case_ids": [],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": "No enabled Excel case; wrapper/feature/contract verification required"
+  },
+  {
+    "api": "device.getAppSrvList",
+    "pdf_pages": [
+      15
+    ],
+    "case_ids": [
+      "device-030",
+      "device-031",
+      "device-032"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-030",
+        "scenario": "获取应用服务器列表-主节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-031",
+        "scenario": "获取应用服务器列表-子节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-032",
+        "scenario": "获取应用服务器列表-appid为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "appId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getDevFileList",
+    "pdf_pages": [
+      16
+    ],
+    "case_ids": [
+      "device-033",
+      "device-034",
+      "device-035"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-033",
+        "scenario": "获取设备文件列表-主节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-034",
+        "scenario": "获取设备文件列表-子节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-035",
+        "scenario": "获取设备文件列表-devid传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "devId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getDevIdByRoomId",
+    "pdf_pages": [
+      17
+    ],
+    "case_ids": [
+      "device-036",
+      "device-037"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-036",
+        "scenario": "通过房间ID获取设备ID",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-037",
+        "scenario": "通过房间ID获取设备ID-roomid传null",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getDevInfoByType",
+    "pdf_pages": [
+      18
+    ],
+    "case_ids": [
+      "device-038",
+      "device-039"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-038",
+        "scenario": "通过类型获取设备信息",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-039",
+        "scenario": "通过类型获取设备信息-devType传null",
+        "expected": {
+          "resultCode": 0,
+          "data": []
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getDevSipPhoneList",
+    "pdf_pages": [
+      19
+    ],
+    "case_ids": [
+      "device-040",
+      "device-041",
+      "device-042"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-040",
+        "scenario": "获取设备SIP电话列表-主节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-041",
+        "scenario": "获取设备SIP电话列表-子节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-042",
+        "scenario": "获取设备SIP电话列表-devid传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "devId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getDevVerifyCode",
+    "pdf_pages": [
+      27
+    ],
+    "case_ids": [
+      "device-061",
+      "device-062",
+      "device-063"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-061",
+        "scenario": "获取主节点设备验证码",
+        "expected": {
+          "verifyCode": "1111",
+          "result": 0,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-062",
+        "scenario": "获取子节点设备验证码",
+        "expected": {
+          "verifyCode": "1111",
+          "result": 0,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-063",
+        "scenario": "获取节点设备验证码-devId为空",
+        "expected": {
+          "result": -1,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "devId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getFrontAddress",
+    "pdf_pages": [
+      21
+    ],
+    "case_ids": [
+      "device-045"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-045",
+        "scenario": "获取前置ip地址",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getFrontIp",
+    "pdf_pages": [
+      21
+    ],
+    "case_ids": [
+      "device-044"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-044",
+        "scenario": "获取前置ip",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getLastLicenseTime",
+    "pdf_pages": [
+      20
+    ],
+    "case_ids": [
+      "device-043"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-043",
+        "scenario": "获取最后许可时间",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getNodeIdByLocal",
+    "pdf_pages": [
+      22
+    ],
+    "case_ids": [
+      "device-046",
+      "device-047",
+      "device-048"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": true,
+    "workflow": "test_node_selector_contract/test_node_selector_valid",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-046",
+        "scenario": "通过本地获取节点ID",
+        "expected": {
+          "resultCode": 0,
+          "nodeId": "${env.node_id}"
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-047",
+        "scenario": "节点查询-isLocal非法字符串应返回4108",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-048",
+        "scenario": "节点查询-isLocal为null应返回4108",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "isLocal"
+        ]
+      }
+    ],
+    "last_validation": "live pass: 2026-10-19-165744-face-retired-full",
+    "gap": null,
+    "developer_confirmed_behavior": "Developer retained numeric 0/1 coercion; verify selected node against read-only data and preserve node state."
+  },
+  {
+    "api": "device.getNodeList",
+    "pdf_pages": [
+      23
+    ],
+    "case_ids": [
+      "device-049"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-049",
+        "scenario": "获取节点列表",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getOnlineDevCount",
+    "pdf_pages": [
+      24
+    ],
+    "case_ids": [
+      "device-050"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-050",
+        "scenario": "获取在线设备数量",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getRoomDefDevId",
+    "pdf_pages": [
+      24
+    ],
+    "case_ids": [
+      "device-051",
+      "device-052",
+      "device-053"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-051",
+        "scenario": "获取房间默认设备ID",
+        "expected": {
+          "deviceId": "${env.primary.device_id}",
+          "result": 0,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-052",
+        "scenario": "获取房间默认设备ID-roomid为空",
+        "expected": {
+          "deviceId": "${env.primary.device_id}",
+          "result": 0,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "device-053",
+        "scenario": "获取房间默认设备ID-传入不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getServiceList",
+    "pdf_pages": [
+      25
+    ],
+    "case_ids": [
+      "device-054",
+      "device-055"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-054",
+        "scenario": "获取主节点服务列表",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-055",
+        "scenario": "获取服务列表-传入devId为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "devId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getSubNodeList",
+    "pdf_pages": [
+      26
+    ],
+    "case_ids": [
+      "device-056",
+      "device-057"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-056",
+        "scenario": "获取子节点列表",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-057",
+        "scenario": "获取子节点列表-nodeId传空",
+        "expected": {
+          "resultCode": 0,
+          "data": []
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getSystemParam",
+    "pdf_pages": [
+      27
+    ],
+    "case_ids": [
+      "device-058",
+      "device-059",
+      "device-060",
+      "device-121",
+      "device-122"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-058",
+        "scenario": "获取系统参数",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-059",
+        "scenario": "获取系统参数-paramName类型为int",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-060",
+        "scenario": "获取系统参数-paramName为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "paramName"
+        ]
+      },
+      {
+        "case_id": "device-121",
+        "scenario": "备份系统参数原值-WEB_MEETING_CONTROL_ADDRESS",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-122",
+        "scenario": "备份系统参数原值-fmServerLogLevel",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.getVgwAddr",
+    "pdf_pages": [
+      28
+    ],
+    "case_ids": [
+      "device-064",
+      "device-065"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-064",
+        "scenario": "获取VGW地址",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-065",
+        "scenario": "获取VGW地址失败-devId为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "request"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.registerService",
+    "pdf_pages": [
+      29
+    ],
+    "case_ids": [
+      "device-076",
+      "device-077",
+      "device-078",
+      "device-079",
+      "device-080",
+      "device-081",
+      "device-082",
+      "device-083",
+      "device-084",
+      "device-085"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "service_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-076",
+        "scenario": "注册服务-FMFileSrv-meeting2",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-077",
+        "scenario": "注册服务-FMFrontSrv-MainDev",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-078",
+        "scenario": "注册服务-FMFileSrv-MainDev",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-079",
+        "scenario": "注册服务-FMFileMgrSrv-meeting2",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-080",
+        "scenario": "注册服务-FMFileMgrSrv-MainDev",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-081",
+        "scenario": "注册服务-FMConfSrv-MainDev",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-082",
+        "scenario": "注册服务-FMConfSrv-meeting2",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-083",
+        "scenario": "注册服务-deviceId传参为空",
+        "expected": {
+          "serviceId": -1,
+          "result": -1,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "deviceId"
+        ]
+      },
+      {
+        "case_id": "device-084",
+        "scenario": "注册服务-srvAppId传参为空",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": [
+          "srvAppId"
+        ]
+      },
+      {
+        "case_id": "device-085",
+        "scenario": "注册服务-srvAddress传参为空",
+        "expected": {
+          "serviceId": -1,
+          "result": -1,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "deviceId",
+          "srvAddress"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.serviceUnregister",
+    "pdf_pages": [
+      30
+    ],
+    "case_ids": [
+      "device-066",
+      "device-067",
+      "device-068",
+      "device-069",
+      "device-070",
+      "device-071",
+      "device-072",
+      "device-073",
+      "device-074",
+      "device-075"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "service_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-066",
+        "scenario": "服务注销-FMWebProxy-MainDev",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-067",
+        "scenario": "服务注销-FMFileSrv-meeting2",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-068",
+        "scenario": "服务注销-FMFrontSrv-MainDev",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-069",
+        "scenario": "服务注销-FMFileSrv-MainDev",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-070",
+        "scenario": "服务注销-FMFileMgrSrv-meeting2",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-071",
+        "scenario": "服务注销-FMFileMgrSrv-MainDev",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-072",
+        "scenario": "服务注销-FMConfSrv-MainDev",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-073",
+        "scenario": "服务注销-FMConfSrv-meeting2",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-074",
+        "scenario": "服务注销-serviceId传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "serviceId"
+        ]
+      },
+      {
+        "case_id": "device-075",
+        "scenario": "服务注销-serviceId传非int类型",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.setDocumentConversionSwitch",
+    "pdf_pages": [
+      30
+    ],
+    "case_ids": [
+      "device-086",
+      "device-087",
+      "device-088",
+      "device-089"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "test_conversion_switch_contract/test_conversion_switch_valid",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-086",
+        "scenario": "设置文档转换开关-false",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-087",
+        "scenario": "设置文档转换开关-true",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-088",
+        "scenario": "设置文档转换开关-globalSwitch传空",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "globalSwitch"
+        ]
+      },
+      {
+        "case_id": "device-089",
+        "scenario": "还原文档转换开关-恢复初始值false",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "live pass: 2026-10-19-165744-face-retired-full",
+    "gap": null,
+    "developer_confirmed_behavior": "Developer retained string conversion: empty/blank/false -> false, true -> true; verify stored switch and fixture restoration."
+  },
+  {
+    "api": "device.setNodeStatus",
+    "pdf_pages": [
+      31
+    ],
+    "case_ids": [
+      "device-090",
+      "device-091",
+      "device-092",
+      "device-093",
+      "device-094"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-090",
+        "scenario": "设置节点状态为0正常",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-091",
+        "scenario": "设置节点状态为1告警",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-092",
+        "scenario": "设置节点状态为2停用",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-093",
+        "scenario": "设置节点状态-ststus传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "status"
+        ]
+      },
+      {
+        "case_id": "device-094",
+        "scenario": "设置节点状态-nodeId传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.startLocalNode",
+    "pdf_pages": [
+      32
+    ],
+    "case_ids": [
+      "device-097",
+      "device-098",
+      "device-099"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-097",
+        "scenario": "启动本地节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-098",
+        "scenario": "启动本地节点-address传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "address"
+        ]
+      },
+      {
+        "case_id": "device-099",
+        "scenario": "启动本地节点-nodeId传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.stopLocalNode",
+    "pdf_pages": [
+      32
+    ],
+    "case_ids": [
+      "device-095",
+      "device-096"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-095",
+        "scenario": "停止本地节点",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-096",
+        "scenario": "停止本地节点-nodeId为空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.tryChangeToMaster",
+    "pdf_pages": [
+      33
+    ],
+    "case_ids": [
+      "device-100",
+      "device-101",
+      "device-102",
+      "device-103"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-100",
+        "scenario": "尝试切换为主设备",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-101",
+        "scenario": "尝试切换为主设备-devId为空",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "devId"
+        ]
+      },
+      {
+        "case_id": "device-102",
+        "scenario": "尝试切换主设备-serverType为null应拒绝且状态不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "serverType"
+        ]
+      },
+      {
+        "case_id": "device-103",
+        "scenario": "尝试切换主设备-address为null应拒绝且状态不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "address"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.updateDevInfoStatusByDevId",
+    "pdf_pages": [
+      37
+    ],
+    "case_ids": [],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": "No enabled Excel case; wrapper/feature/contract verification required"
+  },
+  {
+    "api": "device.updateLicenseInfo",
+    "pdf_pages": [
+      34
+    ],
+    "case_ids": [
+      "device-104",
+      "device-105",
+      "device-106",
+      "device-107",
+      "device-108",
+      "device-109",
+      "device-110"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-104",
+        "scenario": "更新授权信息-会议点数3000，phoneCount为10，h323Count为20",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-105",
+        "scenario": "更新授权信息-4KCount为30，supportRecord为30，recordPoint为30，\nmaxVideoWidth为1280\nmaxVideoHeight为720\nliveLicense为0，\nbusinessName为私有云测试授权",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-106",
+        "scenario": "更新授权信息-\nmaxVideoWidth为1280\nmaxVideoHeight为720\n",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-107",
+        "scenario": "更新授权信息-\nliveRoomCount为100\nliveUserCount为500\n",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-108",
+        "scenario": "更新授权信息-fspType为0",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-109",
+        "scenario": "更新授权信息-fspType为1，devSdk为false",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-110",
+        "scenario": "更新授权信息-devSdk为true",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.updateLicenseState",
+    "pdf_pages": [
+      35
+    ],
+    "case_ids": [
+      "device-111",
+      "device-112",
+      "device-113"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-111",
+        "scenario": "更新授权状态-更新授权时间到2025-12-22",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-112",
+        "scenario": "更新授权状态-更新授权时间传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "lastUpdateTime"
+        ]
+      },
+      {
+        "case_id": "device-113",
+        "scenario": "更新授权状态-licenseStatus传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "licenseStatus"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.updateMeetingLogInfo",
+    "pdf_pages": [
+      36
+    ],
+    "case_ids": [
+      "device-114",
+      "device-115",
+      "device-116",
+      "device-117",
+      "device-118",
+      "device-119",
+      "device-120"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-114",
+        "scenario": "更新会议日志信息",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-115",
+        "scenario": "更新会议日志信息-maxUser传1000",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-116",
+        "scenario": "更新会议日志信息-maxUser传非int类型",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-117",
+        "scenario": "更新会议日志信息-maxUser传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "maxUser"
+        ]
+      },
+      {
+        "case_id": "device-118",
+        "scenario": "更新会议日志信息-meetingId传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "meetingId"
+        ]
+      },
+      {
+        "case_id": "device-119",
+        "scenario": "更新会议日志信息-roomId传不存在的会议id",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-120",
+        "scenario": "更新会议日志信息-roomId传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "device.updateService",
+    "pdf_pages": [
+      36
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "Service status update removed; registerService/serviceUnregister are not equivalent replacements",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "Removed from current 4.39.7 code line; developer confirmed 2026-10-15",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null,
+    "replacement": null,
+    "lifecycle_change": "removed",
+    "removal_commit": "3c58815"
+  },
+  {
+    "api": "device.updateSystemParam",
+    "pdf_pages": [
+      38
+    ],
+    "case_ids": [
+      "device-123",
+      "device-124",
+      "device-125",
+      "device-126",
+      "device-127",
+      "device-128",
+      "device-129",
+      "device-130"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "device-123",
+        "scenario": "更新系统参数-RecordServerIP",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-124",
+        "scenario": "更新系统参数-RecordServerip默认127.0.0.1",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-125",
+        "scenario": "更新系统参数-WEB_MEETING_CONTROL_ADDRESS",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-126",
+        "scenario": "更新系统参数-fmServerLogLevel",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-127",
+        "scenario": "更新系统参数-paramValue传空",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "paramValue"
+        ]
+      },
+      {
+        "case_id": "device-128",
+        "scenario": "还原系统参数-WEB_MEETING_CONTROL_ADDRESS",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-129",
+        "scenario": "还原系统参数-fmServerLogLevel",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "device-130",
+        "scenario": "还原系统参数-emailhost",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "file.addFile",
+    "pdf_pages": [
+      39
+    ],
+    "case_ids": [
+      "file-002"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "file_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-002",
+        "scenario": "添加文件成功1",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "file.delDir",
+    "pdf_pages": [
+      40,
+      40
+    ],
+    "case_ids": [
+      "file-004",
+      "file-005",
+      "file-006",
+      "file-007"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "test_delete_directory_entries_preserves_file_records",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-004",
+        "scenario": "删除目录-不传docid",
+        "expected": {},
+        "intentional_invalid": [
+          "docId"
+        ]
+      },
+      {
+        "case_id": "file-005",
+        "scenario": "删除目录-不传roomid",
+        "expected": {},
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "file-006",
+        "scenario": "删除目录-目标docId不存在，幂等成功且原目录不变",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-007",
+        "scenario": "删除目录-目标roomId不存在，幂等成功且原目录不变",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "live pass: 2026-10-19-165744-face-retired-full",
+    "gap": null,
+    "developer_confirmed_behavior": "Developer retained directory-entry deletion only; descendant DocType 1/2/3 file records remain unchanged. Complete file-tree cleanup is outside this API regression."
+  },
+  {
+    "api": "file.delFile",
+    "pdf_pages": [
+      41
+    ],
+    "case_ids": [
+      "file-009",
+      "file-010",
+      "file-011",
+      "file-012",
+      "file-013"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "file_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-009",
+        "scenario": "删除文件-不传docid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "docId"
+        ]
+      },
+      {
+        "case_id": "file-010",
+        "scenario": "删除文件-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "file-011",
+        "scenario": "删除文件-传不存在的docid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-012",
+        "scenario": "删除文件-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-013",
+        "scenario": "删除文件成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "file.getRoomFileList",
+    "pdf_pages": [
+      42
+    ],
+    "case_ids": [
+      "file-014"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-014",
+        "scenario": "获取房间文件列表成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "file.getRootDirList",
+    "pdf_pages": [
+      43
+    ],
+    "case_ids": [
+      "file-015"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-015",
+        "scenario": "获取根目录列表成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "file.getUselessFile",
+    "pdf_pages": [
+      44
+    ],
+    "case_ids": [
+      "file-016"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-016",
+        "scenario": "获取无用文件成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "file.moveDocFile",
+    "pdf_pages": [
+      45
+    ],
+    "case_ids": [
+      "file-017",
+      "file-018",
+      "file-019",
+      "file-020",
+      "file-021",
+      "file-022",
+      "file-023"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "file_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-017",
+        "scenario": "移动文档文件成功",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-018",
+        "scenario": "移动文档文件-不传docid",
+        "expected": {
+          "result": -9,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "docId"
+        ]
+      },
+      {
+        "case_id": "file-019",
+        "scenario": "移动文档文件-不传roomid",
+        "expected": {
+          "result": -9,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "file-020",
+        "scenario": "移动文档-省略parentId按当前版本默认根目录处理",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": [
+          "parentId"
+        ]
+      },
+      {
+        "case_id": "file-021",
+        "scenario": "移动文档文件-传错误的docid",
+        "expected": {
+          "result": -9,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-022",
+        "scenario": "移动文档文件-传不存在的roomid",
+        "expected": {
+          "result": -9,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-023",
+        "scenario": "移动目录-按设计写入指定parentId并保留其他文件字段",
+        "expected": {
+          "resultCode": 0,
+          "result": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "file.renameFile",
+    "pdf_pages": [
+      45
+    ],
+    "case_ids": [
+      "file-024",
+      "file-025",
+      "file-026",
+      "file-027",
+      "file-028",
+      "file-029"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "file_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "file-024",
+        "scenario": "重命名文件成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-025",
+        "scenario": "重命名缺少docId，拒绝且原文件不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "docId"
+        ]
+      },
+      {
+        "case_id": "file-026",
+        "scenario": "重命名缺少roomId，拒绝且原文件不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "file-027",
+        "scenario": "重命名缺少docName，拒绝且原文件名不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "docName",
+          "name"
+        ]
+      },
+      {
+        "case_id": "file-028",
+        "scenario": "重命名文件-传错误的docid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "file-029",
+        "scenario": "重命名文件-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.checkRoomRemainTime",
+    "pdf_pages": [
+      48
+    ],
+    "case_ids": [
+      "room-007",
+      "room-008"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-007",
+        "scenario": "正确检查会议室保留时间",
+        "expected": {
+          "remainMinute": 1000,
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-008",
+        "scenario": "检查会议室保留时间-错误的会议室id",
+        "expected": {
+          "remainMinute": 0,
+          "result": -13
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.confLog",
+    "pdf_pages": [
+      49
+    ],
+    "case_ids": [],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": "No enabled Excel case; wrapper/feature/contract verification required"
+  },
+  {
+    "api": "room.confRoomStart",
+    "pdf_pages": [
+      50
+    ],
+    "case_ids": [
+      "room-010",
+      "room-011"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": true,
+    "workflow": "meeting_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-010",
+        "scenario": "成功开启会议室",
+        "expected": {
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-011",
+        "scenario": "开启会议室-缺少文档必填serviceId应拒绝",
+        "expected": {},
+        "intentional_invalid": [
+          "serviceId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.confRoomStop",
+    "pdf_pages": [
+      52
+    ],
+    "case_ids": [
+      "room-012",
+      "room-013",
+      "room-014"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": true,
+    "workflow": "meeting_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-012",
+        "scenario": "成功关闭会议室",
+        "expected": {
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-013",
+        "scenario": "关闭会议室-不传serviceid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "serviceId"
+        ]
+      },
+      {
+        "case_id": "room-014",
+        "scenario": "关闭会议室-serviceid与开启时不一致",
+        "expected": {
+          "result": -8,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.confUserLogin2",
+    "pdf_pages": [
+      54
+    ],
+    "case_ids": [
+      "room-015",
+      "room-016",
+      "room-017"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-015",
+        "scenario": "用户成功登录会议室",
+        "expected": {
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-016",
+        "scenario": "用户登录会议室-不传roomid",
+        "expected": {
+          "resultCode": 4107
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-017",
+        "scenario": "用户登录会议室-不传serviceid",
+        "expected": {
+          "result": 0
+        },
+        "intentional_invalid": [
+          "serviceId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.delRoomRoute",
+    "pdf_pages": [
+      56
+    ],
+    "case_ids": [
+      "room-078"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "route_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-078",
+        "scenario": "成功删除会议室路由",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.deleteRoomRouteInfo",
+    "pdf_pages": [
+      55
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "Route deletion uses roomId/svrAppId/svrNodeId; roomId=0 selects scoped bulk deletion",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "Removed from current 4.39.7 code line; developer confirmed 2026-10-15",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null,
+    "replacement": "room.delRoomRoute",
+    "lifecycle_change": "merged",
+    "removal_commit": "3c58815"
+  },
+  {
+    "api": "room.getCDNInfo",
+    "pdf_pages": [
+      53
+    ],
+    "case_ids": [
+      "room-091",
+      "room-092",
+      "room-093"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-091",
+        "scenario": "获取CDN信息成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-092",
+        "scenario": "获取CDN信息-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-093",
+        "scenario": "获取CDN信息成功-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRealRoomId",
+    "pdf_pages": [
+      47,
+      57
+    ],
+    "case_ids": [
+      "room-005",
+      "room-006",
+      "room-018",
+      "room-019",
+      "room-020"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-005",
+        "scenario": "成功获取会议室id",
+        "expected": {
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-006",
+        "scenario": "获取会议室id-输入不存在的会议室id",
+        "expected": {
+          "result": -5
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-018",
+        "scenario": "成功获取真实房间id",
+        "expected": {
+          "realRoomId": 10000,
+          "result": 0,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-019",
+        "scenario": "获取真实房间id-传不存在的id",
+        "expected": {
+          "result": -5
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-020",
+        "scenario": "获取真实房间id-不传id",
+        "expected": {
+          "result": -5
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRecordRoomCfg",
+    "pdf_pages": [
+      57
+    ],
+    "case_ids": [
+      "room-021",
+      "room-022",
+      "room-023"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-021",
+        "scenario": "成功获取录制房间配置",
+        "expected": {
+          "resultCode": 0,
+          "globalSwitch": "${env.record_global_switch}",
+          "enableExtFullRecord": false
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-022",
+        "scenario": "获取录制房间配置-c传不存在的房间id",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-023",
+        "scenario": "获取录制房间配置-不传id",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomCompanyId",
+    "pdf_pages": [
+      59
+    ],
+    "case_ids": [
+      "room-024",
+      "room-025",
+      "room-026"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-024",
+        "scenario": "成功获取房间公司id",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-025",
+        "scenario": "获取房间公司id-传不存在的房间id",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-026",
+        "scenario": "获取房间公司id-不传id",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomCurDevId",
+    "pdf_pages": [
+      60
+    ],
+    "case_ids": [
+      "room-027",
+      "room-028",
+      "room-029"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-027",
+        "scenario": "成功获取房间当前设备id",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-028",
+        "scenario": "获取房间当前设备id-不传roomid",
+        "expected": {
+          "result": -1,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-029",
+        "scenario": "获取房间当前设备id-不传roomNodeid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomDeptList",
+    "pdf_pages": [
+      61
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "Response uses getRoomDeptList2; room department lookup falls back to t_roomruninfo",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "Removed from current 4.39.7 code line; developer confirmed 2026-10-15",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null,
+    "replacement": "room.getRoomDeptList2",
+    "lifecycle_change": "renamed",
+    "removal_commit": "a0cbc09"
+  },
+  {
+    "api": "room.getRoomDeptList2",
+    "pdf_pages": [
+      60
+    ],
+    "case_ids": [
+      "room-030",
+      "room-031",
+      "room-032"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": "test_room_department_list_current_version",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-030",
+        "scenario": "成功获取房间部门列表2",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-031",
+        "scenario": "获取房间部门列表2-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-032",
+        "scenario": "获取房间部门列表2-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomH323SettingsInfo",
+    "pdf_pages": [
+      75
+    ],
+    "case_ids": [
+      "room-094",
+      "room-095",
+      "room-096",
+      "room-097"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-094",
+        "scenario": "成功获取房间H323设置信息",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-095",
+        "scenario": "获取H323设置信息-不传roomId",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-096",
+        "scenario": "获取H323设置信息-传不存在的roomId",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-097",
+        "scenario": "获取H323设置信息-不传入devId",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "devId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomInfo",
+    "pdf_pages": [
+      62
+    ],
+    "case_ids": [
+      "room-002",
+      "room-033",
+      "room-034",
+      "room-035"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-002",
+        "scenario": "查询会议室详情",
+        "expected": {
+          "resultCode": 0,
+          "roomId": "${env.room_id}"
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-033",
+        "scenario": "成功获取房间信息",
+        "expected": {
+          "resultCode": 0,
+          "roomId": "${env.room_id}"
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-034",
+        "scenario": "获取房间信息-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-035",
+        "scenario": "获取房间信息-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomInviteCode",
+    "pdf_pages": [
+      63
+    ],
+    "case_ids": [
+      "room-036",
+      "room-037",
+      "room-038"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-036",
+        "scenario": "成功获取房间邀请码",
+        "expected": {
+          "resultCode": 0,
+          "enableInvite": true
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-037",
+        "scenario": "获取房间邀请码-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-038",
+        "scenario": "获取房间邀请码-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomRouteInfo",
+    "pdf_pages": [
+      64
+    ],
+    "case_ids": [
+      "room-057",
+      "room-058",
+      "room-059",
+      "room-060",
+      "room-061"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-057",
+        "scenario": "成功获取房间路由信息",
+        "expected": {
+          "resultCode": 0,
+          "svrAddress": "${fixture.address}",
+          "svrAuthCode": "${fixture.auth_code}"
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-058",
+        "scenario": "获取房间路由信息-错误的svrAppid",
+        "expected": {
+          "resultCode": 4107
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-059",
+        "scenario": "获取房间路由信息-错误的svrNodeid",
+        "expected": {
+          "resultCode": 4107
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-060",
+        "scenario": "获取房间路由信息-错误的roomid",
+        "expected": {
+          "resultCode": 4107
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-061",
+        "scenario": "获取房间路由信息-不传roomid",
+        "expected": {
+          "resultCode": 4107
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomSettings",
+    "pdf_pages": [
+      65
+    ],
+    "case_ids": [
+      "room-039",
+      "room-040",
+      "room-041"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-039",
+        "scenario": "成功获取房间设置",
+        "expected": {
+          "resultCode": 0,
+          "roomId": "${env.room_id}"
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-040",
+        "scenario": "获取房间设置-不传roomid",
+        "expected": {},
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-041",
+        "scenario": "获取房间设置-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getRoomUserList",
+    "pdf_pages": [
+      66
+    ],
+    "case_ids": [
+      "room-042",
+      "room-043",
+      "room-044"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-042",
+        "scenario": "成功获取房间用户列表",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-043",
+        "scenario": "获取房间用户列表-不传roomid",
+        "expected": {
+          "data": [],
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-044",
+        "scenario": "获取房间用户列表-传不存在的roomid",
+        "expected": {
+          "data": [],
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getSvrNodeIdByRoomRoute",
+    "pdf_pages": [
+      67
+    ],
+    "case_ids": [
+      "room-045",
+      "room-046",
+      "room-047"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-045",
+        "scenario": "成功通过房间路由获取服务器节点ID",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-046",
+        "scenario": "通过房间路由获取服务器节点ID-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-047",
+        "scenario": "通过房间路由获取服务器节点ID-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.getUserRoomList",
+    "pdf_pages": [
+      68
+    ],
+    "case_ids": [],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": "No enabled Excel case; wrapper/feature/contract verification required"
+  },
+  {
+    "api": "room.meetingLog",
+    "pdf_pages": [
+      69
+    ],
+    "case_ids": [
+      "room-048"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": true,
+    "workflow": "meeting_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-048",
+        "scenario": "新增会议日志成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.replaceRoomRoute",
+    "pdf_pages": [
+      48,
+      70
+    ],
+    "case_ids": [
+      "room-066",
+      "room-067",
+      "room-068",
+      "room-069",
+      "room-070",
+      "room-071",
+      "room-072"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "route_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-066",
+        "scenario": "成功替换房间路由",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-067",
+        "scenario": "替换房间路由-不传roomid",
+        "expected": {},
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-068",
+        "scenario": "替换路由-不存在房间拒绝且原路由不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-069",
+        "scenario": "替换路由-svrAppId为null拒绝且原路由不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "svrAppId"
+        ]
+      },
+      {
+        "case_id": "room-070",
+        "scenario": "替换房间路由-不传svrNodeid",
+        "expected": {},
+        "intentional_invalid": [
+          "svrNodeId"
+        ]
+      },
+      {
+        "case_id": "room-071",
+        "scenario": "替换房间路由-不传svrAddr",
+        "expected": {},
+        "intentional_invalid": [
+          "svrAddress"
+        ]
+      },
+      {
+        "case_id": "room-072",
+        "scenario": "替换房间路由-不传svrAuthCode",
+        "expected": {},
+        "intentional_invalid": [
+          "svrAuthCode"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.requestChairRight",
+    "pdf_pages": [
+      71
+    ],
+    "case_ids": [
+      "room-051",
+      "room-052",
+      "room-053",
+      "room-054",
+      "room-055"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-051",
+        "scenario": "成功请求主席权限",
+        "expected": {
+          "result": 0,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-052",
+        "scenario": "请求主席权限-传错误的密码",
+        "expected": {
+          "result": -70,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-053",
+        "scenario": "请求主席权限-不传密码",
+        "expected": {
+          "resultCode": 4107
+        },
+        "intentional_invalid": [
+          "password"
+        ]
+      },
+      {
+        "case_id": "room-054",
+        "scenario": "请求主席权限-传正确的密码不传roomid",
+        "expected": {
+          "result": -5,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-055",
+        "scenario": "请求主席权限-传正确的密码和不存在的roomid",
+        "expected": {
+          "result": -5,
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.updateRoomInfoByRoomId",
+    "pdf_pages": [
+      74
+    ],
+    "case_ids": [
+      "room-086",
+      "room-087",
+      "room-088",
+      "room-089",
+      "room-090"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-086",
+        "scenario": "成功通过房间ID更新房间信息",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-087",
+        "scenario": "通过房间ID更新房间信息-传非法的curUserCount",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-088",
+        "scenario": "通过房间ID更新房间信息-不传curUserCount",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "request"
+        ]
+      },
+      {
+        "case_id": "room-089",
+        "scenario": "通过房间ID更新房间信息-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-090",
+        "scenario": "通过房间ID更新房间信息-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.updateRoomRoute",
+    "pdf_pages": [
+      71
+    ],
+    "case_ids": [
+      "room-056",
+      "room-062",
+      "room-063",
+      "room-064",
+      "room-065"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "route_lifecycle",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-056",
+        "scenario": "成功更新房间路由",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-062",
+        "scenario": "更新路由-svrAppId为null拒绝且原路由不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "svrAppId"
+        ]
+      },
+      {
+        "case_id": "room-063",
+        "scenario": "更新房间路由-不传svrNodeid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "svrNodeId"
+        ]
+      },
+      {
+        "case_id": "room-064",
+        "scenario": "更新房间路由-不传roomid",
+        "expected": {},
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-065",
+        "scenario": "更新路由-不存在房间返回4108且原路由不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.updateRoomRouteTime",
+    "pdf_pages": [],
+    "case_ids": [
+      "room-073",
+      "room-074",
+      "room-075",
+      "room-076",
+      "room-077"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-073",
+        "scenario": "成功更新房间路由时间",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-074",
+        "scenario": "更新房间路由时间-不传svrAppid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "svrAppId"
+        ]
+      },
+      {
+        "case_id": "room-075",
+        "scenario": "更新房间路由时间-不传svrNodeid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "svrNodeId"
+        ]
+      },
+      {
+        "case_id": "room-076",
+        "scenario": "更新房间路由时间-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-077",
+        "scenario": "更新房间路由时间-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.updateRoomUserState",
+    "pdf_pages": [
+      73
+    ],
+    "case_ids": [
+      "room-079",
+      "room-080",
+      "room-081",
+      "room-082",
+      "room-083",
+      "room-084",
+      "room-085"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-079",
+        "scenario": "成功更新房间用户状态-设置online为1",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-080",
+        "scenario": "成功更新房间用户状态-设置online为0",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-081",
+        "scenario": "更新房间用户状态-不传userid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "userId"
+        ]
+      },
+      {
+        "case_id": "room-082",
+        "scenario": "更新房间用户状态-不传online",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "online"
+        ]
+      },
+      {
+        "case_id": "room-083",
+        "scenario": "更新房间用户状态-设置online为其他",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-084",
+        "scenario": "更新房间用户状态-不传roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      },
+      {
+        "case_id": "room-085",
+        "scenario": "更新房间用户状态-传不存在的roomid",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "room.verifyRoomUser",
+    "pdf_pages": [
+      46
+    ],
+    "case_ids": [
+      "room-003",
+      "room-004"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "room-003",
+        "scenario": "正确验证会议室用户",
+        "expected": {
+          "result": 0,
+          "roomId": "${env.room_id}",
+          "topDeptId": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "room-004",
+        "scenario": "验证会议室用户-必传字段roomid不传",
+        "expected": {
+          "verifyMode": 0,
+          "right": 0,
+          "result": -5,
+          "roomId": 0,
+          "topDeptId": 0
+        },
+        "intentional_invalid": [
+          "roomId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.addFaceRollCallUser",
+    "pdf_pages": [
+      79
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.getFaceInfoByFaceId",
+    "pdf_pages": [
+      82
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.getFaceInfoList",
+    "pdf_pages": [
+      82
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.getFaceUserInfo",
+    "pdf_pages": [],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.getRecordUserName",
+    "pdf_pages": [],
+    "case_ids": [
+      "user-002",
+      "user-003",
+      "user-004"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "user-002",
+        "scenario": "成功获取录制用户名",
+        "expected": {
+          "resultCode": 0,
+          "userName": "${env.username}"
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-003",
+        "scenario": "获取录制用户名-传不存在的用户名",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-004",
+        "scenario": "获取录制用户名-不传用户名",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "userId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.getUserRole",
+    "pdf_pages": [
+      76
+    ],
+    "case_ids": [
+      "user-005",
+      "user-006",
+      "user-007"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "user-005",
+        "scenario": "成功获取用户角色",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-006",
+        "scenario": "获取用户角色-传不存在的用户名",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-007",
+        "scenario": "获取用户角色-不传用户名",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "userId"
+        ]
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.insertIntoFaceRollCall",
+    "pdf_pages": [
+      80
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.updateFaceInfoByFaceId",
+    "pdf_pages": [
+      81
+    ],
+    "case_ids": [],
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "invocation_configured": false,
+    "response_assertions_configured": false,
+    "state_verification_configured": false,
+    "workflow": null,
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.updateUserInfo",
+    "pdf_pages": [
+      77
+    ],
+    "case_ids": [
+      "user-008",
+      "user-009",
+      "user-010",
+      "user-011",
+      "user-012",
+      "user-013",
+      "user-014",
+      "user-015"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": false,
+    "state_verification_configured": true,
+    "workflow": "user_update",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "user-008",
+        "scenario": "成功更新用户信息",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-009",
+        "scenario": "更新用户信息-mobile非标准号段按字符串保存并回查",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-010",
+        "scenario": "更新用户信息-mobile为10位字符串保存并回查",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-011",
+        "scenario": "更新用户信息-mail无分隔符字符串保存并回查",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-012",
+        "scenario": "更新用户信息-tel为5位字符串保存并回查",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-013",
+        "scenario": "更新用户信息-tel为33位字符串保存并回查",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-014",
+        "scenario": "更新用户信息-sex超出目标字段长度，拒绝且资料不变",
+        "expected": {
+          "resultCode": 4108
+        },
+        "intentional_invalid": [
+          "sex"
+        ]
+      },
+      {
+        "case_id": "user-015",
+        "scenario": "局部更新省略nickName，保留原昵称且指定电话更新成功",
+        "expected": {
+          "resultCode": 0
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  },
+  {
+    "api": "user.verifyUser",
+    "pdf_pages": [
+      78
+    ],
+    "case_ids": [
+      "user-016",
+      "user-017",
+      "user-018",
+      "user-019",
+      "user-020"
+    ],
+    "scope_status": "active",
+    "retirement_reason": null,
+    "invocation_configured": true,
+    "response_assertions_configured": true,
+    "state_verification_configured": true,
+    "workflow": "user_permissions",
+    "version_support": "requires target-version confirmation",
+    "contract_pending": [],
+    "configured_business_scenarios": [
+      {
+        "case_id": "user-016",
+        "scenario": "验证用户成功",
+        "expected": {
+          "result": 0
+        },
+        "intentional_invalid": []
+      },
+      {
+        "case_id": "user-017",
+        "scenario": "验证用户-不传nodeid",
+        "expected": {
+          "localUserId": 0,
+          "nickname": "",
+          "role": "0",
+          "result": -2,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "nodeId"
+        ]
+      },
+      {
+        "case_id": "user-018",
+        "scenario": "验证用户-不传logintype",
+        "expected": {
+          "localUserId": 0,
+          "nickname": "",
+          "role": "0",
+          "result": -1,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "loginType"
+        ]
+      },
+      {
+        "case_id": "user-019",
+        "scenario": "验证用户-不传name",
+        "expected": {
+          "localUserId": 0,
+          "nickname": "",
+          "role": "0",
+          "result": -2,
+          "resultCode": 0
+        },
+        "intentional_invalid": [
+          "name"
+        ]
+      },
+      {
+        "case_id": "user-020",
+        "scenario": "用户身份查询-按设计省略password仍返回匹配用户",
+        "expected": {
+          "resultCode": 0,
+          "result": 0,
+          "localUserId": "${env.user_id}",
+          "nickname": "${fixture.nickname}"
+        },
+        "intentional_invalid": []
+      }
+    ],
+    "last_validation": "not_run",
+    "gap": null
+  }
+]

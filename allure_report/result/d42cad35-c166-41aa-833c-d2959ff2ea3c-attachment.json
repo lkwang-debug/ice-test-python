@@ -1,9 +1,0 @@
-{
-  "requestId": "room.getRoomDeptList2-1774000264412",
-  "className": "room",
-  "methodName": "getRoomDeptList2",
-  "params": {
-    "roomId": 12345
-  },
-  "timestamp": "2026-03-20 17:51:04"
-}

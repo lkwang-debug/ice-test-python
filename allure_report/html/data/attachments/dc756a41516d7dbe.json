@@ -1,3 +1,0 @@
-{
-  "nodeAddress": "${device_checkDevList.response.data.1.devIp}:1089;"
-}

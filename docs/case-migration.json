@@ -1,0 +1,6541 @@
+[
+  {
+    "case_id": "company-002",
+    "enabled": true,
+    "api": "company.getCompanyBusiness",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 2,
+    "scenario": "正确获取公司业务信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "businessName": "Default",
+      "enableData": "1"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "company-003",
+    "enabled": true,
+    "api": "company.getCompanyBusiness",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 3,
+    "scenario": "获取公司业务信息，business传空",
+    "intentional_invalid": [
+      "business"
+    ],
+    "expected": {
+      "result": -9,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "company-004",
+    "enabled": true,
+    "api": "company.getCompanyBusiness",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 4,
+    "scenario": "获取公司业务信息，business传非数字",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -9,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "company-005",
+    "enabled": true,
+    "api": "company.checkMeetingLog",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 5,
+    "scenario": "正确检查会议服务日志",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-002",
+    "enabled": true,
+    "api": "device.changeToSlave",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 2,
+    "scenario": "正确切换主从设备,",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-003",
+    "enabled": true,
+    "api": "device.changeToSlave",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 3,
+    "scenario": "切换主从设备,输入不存在的devId和serverType",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-004",
+    "enabled": true,
+    "api": "device.changeToSlave",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 4,
+    "scenario": "切换主从设备,输入devId和serverType为空",
+    "intentional_invalid": [
+      "serverType",
+      "devId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-005",
+    "enabled": true,
+    "api": "device.checkDevList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 5,
+    "scenario": "正确检查设备列表-返回主节点且在线",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-006",
+    "enabled": true,
+    "api": "device.checkDevList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 6,
+    "scenario": "正确检查设备列表-返回主节点和子节点且在线",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-007",
+    "enabled": true,
+    "api": "device.devUpdate2",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 7,
+    "scenario": "更新子节点设备信息-cpuLoad为10",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "devName": "${env.secondary.device_id}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-008",
+    "enabled": true,
+    "api": "device.checkDevList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 8,
+    "scenario": "正确检查设备列表-cpuLoad为10",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-009",
+    "enabled": true,
+    "api": "device.delRoomRouteByTimer",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Timer invocation; fixture restores pre-existing routing records through API. Expiration branches need dedicated timed data; restored timestamps are refreshed."
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 9,
+    "scenario": "正确删除定时路由信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-010",
+    "enabled": true,
+    "api": "device.devRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 10,
+    "scenario": "设备注册-注册主节点",
+    "intentional_invalid": [],
+    "expected": {
+      "backDev": "",
+      "priority": 2,
+      "maxOnline": 1000,
+      "maxBandWidth": 100000,
+      "roomMaxUserCount": 1000,
+      "result": 0,
+      "status": "1",
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-011",
+    "enabled": true,
+    "api": "device.devRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 11,
+    "scenario": "设备注册-注册子节点",
+    "intentional_invalid": [],
+    "expected": {
+      "backDev": "",
+      "priority": 2,
+      "maxOnline": 1000,
+      "maxBandWidth": 100000,
+      "roomMaxUserCount": 1000,
+      "result": 0,
+      "status": "1",
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-012",
+    "enabled": true,
+    "api": "device.devRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 12,
+    "scenario": "设备注册-注册节点失败，result返回-10",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -10,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-013",
+    "enabled": true,
+    "api": "device.devRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 13,
+    "scenario": "设备注册-少参场景，不传deviceId",
+    "intentional_invalid": [
+      "request"
+    ],
+    "expected": {
+      "result": -10,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-014",
+    "enabled": true,
+    "api": "device.devRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 14,
+    "scenario": "设备注册-传入错误的verifyCode",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -10,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-015",
+    "enabled": true,
+    "api": "device.devUnRegister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 15,
+    "scenario": "设备注销-注销主节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-016",
+    "enabled": true,
+    "api": "device.devUnRegister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "device"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 16,
+    "scenario": "设备注销-注销子节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-017",
+    "enabled": true,
+    "api": "device.frontGetParentNodeInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 17,
+    "scenario": "正确获取父节点信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-018",
+    "enabled": true,
+    "api": "device.frontGetParentNodeInfo",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 18,
+    "scenario": "获取父节点信息失败-localNodeId传空",
+    "intentional_invalid": [
+      "localNodeId"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": -52
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-019",
+    "enabled": true,
+    "api": "device.frontNodeUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 19,
+    "scenario": "前端节点正常注销",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-020",
+    "enabled": true,
+    "api": "device.frontNodeUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 20,
+    "scenario": "前端节点异常注销-status为空",
+    "intentional_invalid": [
+      "status"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-021",
+    "enabled": true,
+    "api": "device.frontNodeUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 21,
+    "scenario": "前端节点异常注销-nodeId为空",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-022",
+    "enabled": true,
+    "api": "device.frontNodeRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 22,
+    "scenario": "前端节点正常注册",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": -1
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-023",
+    "enabled": true,
+    "api": "device.frontNodeRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 23,
+    "scenario": "前端节点异常注册-不传nodeId",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": -1
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-024",
+    "enabled": true,
+    "api": "device.frontNodeRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 24,
+    "scenario": "前端节点异常注册-传不存在的nodeId",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": -1
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-025",
+    "enabled": true,
+    "api": "device.frontNodeRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 25,
+    "scenario": "前端节点异常注册-nodeCheckCode传空",
+    "intentional_invalid": [
+      "nodeCheckCode"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": -1
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-026",
+    "enabled": true,
+    "api": "device.frontNodeRegister",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 26,
+    "scenario": "前端节点异常注册-subNodeAddress传空",
+    "intentional_invalid": [
+      "subNodeAddress"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": -1
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-027",
+    "enabled": true,
+    "api": "device.frontStart",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 27,
+    "scenario": "启用前端节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-028",
+    "enabled": true,
+    "api": "device.frontStart",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 28,
+    "scenario": "启用前端节点-nodeAddress为空",
+    "intentional_invalid": [
+      "nodeAddress"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-029",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false
+  },
+  {
+    "case_id": "device-030",
+    "enabled": true,
+    "api": "device.getAppSrvList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 30,
+    "scenario": "获取应用服务器列表-主节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-031",
+    "enabled": true,
+    "api": "device.getAppSrvList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 31,
+    "scenario": "获取应用服务器列表-子节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-032",
+    "enabled": true,
+    "api": "device.getAppSrvList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 32,
+    "scenario": "获取应用服务器列表-appid为空",
+    "intentional_invalid": [
+      "appId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-033",
+    "enabled": true,
+    "api": "device.getDevFileList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 33,
+    "scenario": "获取设备文件列表-主节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-034",
+    "enabled": true,
+    "api": "device.getDevFileList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 34,
+    "scenario": "获取设备文件列表-子节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-035",
+    "enabled": true,
+    "api": "device.getDevFileList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 35,
+    "scenario": "获取设备文件列表-devid传空",
+    "intentional_invalid": [
+      "devId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-036",
+    "enabled": true,
+    "api": "device.getDevIdByRoomId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 36,
+    "scenario": "通过房间ID获取设备ID",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-037",
+    "enabled": true,
+    "api": "device.getDevIdByRoomId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 37,
+    "scenario": "通过房间ID获取设备ID-roomid传null",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-038",
+    "enabled": true,
+    "api": "device.getDevInfoByType",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 38,
+    "scenario": "通过类型获取设备信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-039",
+    "enabled": true,
+    "api": "device.getDevInfoByType",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 39,
+    "scenario": "通过类型获取设备信息-devType传null",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "data": []
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-040",
+    "enabled": true,
+    "api": "device.getDevSipPhoneList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 40,
+    "scenario": "获取设备SIP电话列表-主节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-041",
+    "enabled": true,
+    "api": "device.getDevSipPhoneList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 41,
+    "scenario": "获取设备SIP电话列表-子节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-042",
+    "enabled": true,
+    "api": "device.getDevSipPhoneList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 42,
+    "scenario": "获取设备SIP电话列表-devid传空",
+    "intentional_invalid": [
+      "devId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-043",
+    "enabled": true,
+    "api": "device.getLastLicenseTime",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 43,
+    "scenario": "获取最后许可时间",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-044",
+    "enabled": true,
+    "api": "device.getFrontIp",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 44,
+    "scenario": "获取前置ip",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-045",
+    "enabled": true,
+    "api": "device.getFrontAddress",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 45,
+    "scenario": "获取前置ip地址",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-046",
+    "enabled": true,
+    "api": "device.getNodeIdByLocal",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 46,
+    "scenario": "通过本地获取节点ID",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "nodeId": "${env.node_id}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-047",
+    "enabled": true,
+    "api": "device.getNodeIdByLocal",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "PDF p22: String filter, not an integer parsing test"
+    },
+    "topology": "any",
+    "contract_issue": "Developer confirmed 2026-10-19: invalid input returns 4108; 4107 is reserved for unexpected system/database failures.",
+    "source_row": 47,
+    "scenario": "节点查询-isLocal非法字符串应返回4108",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-048",
+    "enabled": true,
+    "api": "device.getNodeIdByLocal",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "2026-10-19 validation contract: reject missing/null required input with 4108; retain independent state checks. serverType enumeration remains separate from null validation.",
+    "source_row": 48,
+    "scenario": "节点查询-isLocal为null应返回4108",
+    "intentional_invalid": [
+      "isLocal"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-049",
+    "enabled": true,
+    "api": "device.getNodeList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 49,
+    "scenario": "获取节点列表",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-050",
+    "enabled": true,
+    "api": "device.getOnlineDevCount",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 50,
+    "scenario": "获取在线设备数量",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-051",
+    "enabled": true,
+    "api": "device.getRoomDefDevId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 51,
+    "scenario": "获取房间默认设备ID",
+    "intentional_invalid": [],
+    "expected": {
+      "deviceId": "${env.primary.device_id}",
+      "result": 0,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-052",
+    "enabled": true,
+    "api": "device.getRoomDefDevId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 52,
+    "scenario": "获取房间默认设备ID-roomid为空",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "deviceId": "${env.primary.device_id}",
+      "result": 0,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-053",
+    "enabled": true,
+    "api": "device.getRoomDefDevId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 53,
+    "scenario": "获取房间默认设备ID-传入不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-054",
+    "enabled": true,
+    "api": "device.getServiceList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service_list"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 54,
+    "scenario": "获取主节点服务列表",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-055",
+    "enabled": true,
+    "api": "device.getServiceList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service_list"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 55,
+    "scenario": "获取服务列表-传入devId为空",
+    "intentional_invalid": [
+      "devId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-056",
+    "enabled": true,
+    "api": "device.getSubNodeList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 56,
+    "scenario": "获取子节点列表",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-057",
+    "enabled": true,
+    "api": "device.getSubNodeList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 57,
+    "scenario": "获取子节点列表-nodeId传空",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "data": []
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-058",
+    "enabled": true,
+    "api": "device.getSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 58,
+    "scenario": "获取系统参数",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-059",
+    "enabled": true,
+    "api": "device.getSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 59,
+    "scenario": "获取系统参数-paramName类型为int",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-060",
+    "enabled": true,
+    "api": "device.getSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 60,
+    "scenario": "获取系统参数-paramName为空",
+    "intentional_invalid": [
+      "paramName"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-061",
+    "enabled": true,
+    "api": "device.getDevVerifyCode",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 61,
+    "scenario": "获取主节点设备验证码",
+    "intentional_invalid": [],
+    "expected": {
+      "verifyCode": "1111",
+      "result": 0,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-062",
+    "enabled": true,
+    "api": "device.getDevVerifyCode",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 62,
+    "scenario": "获取子节点设备验证码",
+    "intentional_invalid": [],
+    "expected": {
+      "verifyCode": "1111",
+      "result": 0,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-063",
+    "enabled": true,
+    "api": "device.getDevVerifyCode",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 63,
+    "scenario": "获取节点设备验证码-devId为空",
+    "intentional_invalid": [
+      "devId"
+    ],
+    "expected": {
+      "result": -1,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-064",
+    "enabled": true,
+    "api": "device.getVgwAddr",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 64,
+    "scenario": "获取VGW地址",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-065",
+    "enabled": true,
+    "api": "device.getVgwAddr",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 65,
+    "scenario": "获取VGW地址失败-devId为空",
+    "intentional_invalid": [
+      "request"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-066",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 66,
+    "scenario": "服务注销-FMWebProxy-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-067",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 67,
+    "scenario": "服务注销-FMFileSrv-meeting2",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-068",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 68,
+    "scenario": "服务注销-FMFrontSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-069",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 69,
+    "scenario": "服务注销-FMFileSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-070",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 70,
+    "scenario": "服务注销-FMFileMgrSrv-meeting2",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-071",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 71,
+    "scenario": "服务注销-FMFileMgrSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-072",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 72,
+    "scenario": "服务注销-FMConfSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-073",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 73,
+    "scenario": "服务注销-FMConfSrv-meeting2",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-074",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 74,
+    "scenario": "服务注销-serviceId传空",
+    "intentional_invalid": [
+      "serviceId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-075",
+    "enabled": true,
+    "api": "device.serviceUnregister",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 75,
+    "scenario": "服务注销-serviceId传非int类型",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-076",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 76,
+    "scenario": "注册服务-FMFileSrv-meeting2",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-077",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 77,
+    "scenario": "注册服务-FMFrontSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-078",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 78,
+    "scenario": "注册服务-FMFileSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-079",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 79,
+    "scenario": "注册服务-FMFileMgrSrv-meeting2",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-080",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 80,
+    "scenario": "注册服务-FMFileMgrSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-081",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 81,
+    "scenario": "注册服务-FMConfSrv-MainDev",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-082",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "dual",
+    "contract_issue": "",
+    "source_row": 82,
+    "scenario": "注册服务-FMConfSrv-meeting2",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-083",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 83,
+    "scenario": "注册服务-deviceId传参为空",
+    "intentional_invalid": [
+      "deviceId"
+    ],
+    "expected": {
+      "serviceId": -1,
+      "result": -1,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-084",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 84,
+    "scenario": "注册服务-srvAppId传参为空",
+    "intentional_invalid": [
+      "srvAppId"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-085",
+    "enabled": true,
+    "api": "device.registerService",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "service"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 85,
+    "scenario": "注册服务-srvAddress传参为空",
+    "intentional_invalid": [
+      "deviceId",
+      "srvAddress"
+    ],
+    "expected": {
+      "serviceId": -1,
+      "result": -1,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-086",
+    "enabled": true,
+    "api": "device.setDocumentConversionSwitch",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "feature"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 86,
+    "scenario": "设置文档转换开关-false",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-087",
+    "enabled": true,
+    "api": "device.setDocumentConversionSwitch",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "feature"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 87,
+    "scenario": "设置文档转换开关-true",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-088",
+    "enabled": true,
+    "api": "device.setDocumentConversionSwitch",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "feature"
+    },
+    "topology": "any",
+    "contract_issue": "Developer confirmed 2026-10-19: invalid input returns 4108; 4107 is reserved for unexpected system/database failures.",
+    "source_row": 88,
+    "scenario": "设置文档转换开关-globalSwitch传空",
+    "intentional_invalid": [
+      "globalSwitch"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-089",
+    "enabled": true,
+    "api": "device.setDocumentConversionSwitch",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "feature"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 89,
+    "scenario": "还原文档转换开关-恢复初始值false",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-090",
+    "enabled": true,
+    "api": "device.setNodeStatus",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 90,
+    "scenario": "设置节点状态为0正常",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-091",
+    "enabled": true,
+    "api": "device.setNodeStatus",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 91,
+    "scenario": "设置节点状态为1告警",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-092",
+    "enabled": true,
+    "api": "device.setNodeStatus",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 92,
+    "scenario": "设置节点状态为2停用",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-093",
+    "enabled": true,
+    "api": "device.setNodeStatus",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 93,
+    "scenario": "设置节点状态-ststus传空",
+    "intentional_invalid": [
+      "status"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-094",
+    "enabled": true,
+    "api": "device.setNodeStatus",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 94,
+    "scenario": "设置节点状态-nodeId传空",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-095",
+    "enabled": true,
+    "api": "device.stopLocalNode",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 95,
+    "scenario": "停止本地节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-096",
+    "enabled": true,
+    "api": "device.stopLocalNode",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 96,
+    "scenario": "停止本地节点-nodeId为空",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-097",
+    "enabled": true,
+    "api": "device.startLocalNode",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 97,
+    "scenario": "启动本地节点",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-098",
+    "enabled": true,
+    "api": "device.startLocalNode",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 98,
+    "scenario": "启动本地节点-address传空",
+    "intentional_invalid": [
+      "address"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-099",
+    "enabled": true,
+    "api": "device.startLocalNode",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "node"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 99,
+    "scenario": "启动本地节点-nodeId传空",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-100",
+    "enabled": true,
+    "api": "device.tryChangeToMaster",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 100,
+    "scenario": "尝试切换为主设备",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-101",
+    "enabled": true,
+    "api": "device.tryChangeToMaster",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "master"
+    },
+    "topology": "any",
+    "contract_issue": "Developer confirmed 2026-10-19: invalid input returns 4108; 4107 is reserved for unexpected system/database failures.",
+    "source_row": 101,
+    "scenario": "尝试切换为主设备-devId为空",
+    "intentional_invalid": [
+      "devId"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-102",
+    "enabled": true,
+    "api": "device.tryChangeToMaster",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "master"
+    },
+    "topology": "any",
+    "contract_issue": "2026-10-19 validation contract: reject missing/null required input with 4108; retain independent state checks. serverType enumeration remains separate from null validation.",
+    "source_row": 102,
+    "scenario": "尝试切换主设备-serverType为null应拒绝且状态不变",
+    "intentional_invalid": [
+      "serverType"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-103",
+    "enabled": true,
+    "api": "device.tryChangeToMaster",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "master"
+    },
+    "topology": "any",
+    "contract_issue": "2026-10-19 validation contract: reject missing/null required input with 4108; retain independent state checks. serverType enumeration remains separate from null validation.",
+    "source_row": 103,
+    "scenario": "尝试切换主设备-address为null应拒绝且状态不变",
+    "intentional_invalid": [
+      "address"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-104",
+    "enabled": true,
+    "api": "device.updateLicenseInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 104,
+    "scenario": "更新授权信息-会议点数3000，phoneCount为10，h323Count为20",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-105",
+    "enabled": true,
+    "api": "device.updateLicenseInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 105,
+    "scenario": "更新授权信息-4KCount为30，supportRecord为30，recordPoint为30，\nmaxVideoWidth为1280\nmaxVideoHeight为720\nliveLicense为0，\nbusinessName为私有云测试授权",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-106",
+    "enabled": true,
+    "api": "device.updateLicenseInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 106,
+    "scenario": "更新授权信息-\nmaxVideoWidth为1280\nmaxVideoHeight为720\n",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-107",
+    "enabled": true,
+    "api": "device.updateLicenseInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 107,
+    "scenario": "更新授权信息-\nliveRoomCount为100\nliveUserCount为500\n",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-108",
+    "enabled": true,
+    "api": "device.updateLicenseInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 108,
+    "scenario": "更新授权信息-fspType为0",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-109",
+    "enabled": true,
+    "api": "device.updateLicenseInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 109,
+    "scenario": "更新授权信息-fspType为1，devSdk为false",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-110",
+    "enabled": true,
+    "api": "device.updateLicenseInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 110,
+    "scenario": "更新授权信息-devSdk为true",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-111",
+    "enabled": true,
+    "api": "device.updateLicenseState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "license"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 111,
+    "scenario": "更新授权状态-更新授权时间到2025-12-22",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-112",
+    "enabled": true,
+    "api": "device.updateLicenseState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "PDF p35 does not specify defaults for omitted optional license fields; fixture still restores the snapshot"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 112,
+    "scenario": "更新授权状态-更新授权时间传空",
+    "intentional_invalid": [
+      "lastUpdateTime"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-113",
+    "enabled": true,
+    "api": "device.updateLicenseState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "PDF p35 does not specify defaults for omitted optional license fields; fixture still restores the snapshot"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 113,
+    "scenario": "更新授权状态-licenseStatus传空",
+    "intentional_invalid": [
+      "licenseStatus"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-114",
+    "enabled": true,
+    "api": "device.updateMeetingLogInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 114,
+    "scenario": "更新会议日志信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-115",
+    "enabled": true,
+    "api": "device.updateMeetingLogInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 115,
+    "scenario": "更新会议日志信息-maxUser传1000",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-116",
+    "enabled": true,
+    "api": "device.updateMeetingLogInfo",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 116,
+    "scenario": "更新会议日志信息-maxUser传非int类型",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-117",
+    "enabled": true,
+    "api": "device.updateMeetingLogInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 117,
+    "scenario": "更新会议日志信息-maxUser传空",
+    "intentional_invalid": [
+      "maxUser"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-118",
+    "enabled": true,
+    "api": "device.updateMeetingLogInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 118,
+    "scenario": "更新会议日志信息-meetingId传空",
+    "intentional_invalid": [
+      "meetingId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-119",
+    "enabled": true,
+    "api": "device.updateMeetingLogInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 119,
+    "scenario": "更新会议日志信息-roomId传不存在的会议id",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-120",
+    "enabled": true,
+    "api": "device.updateMeetingLogInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Empty response contract; lifecycle effects are verified in separate workflows or remain a declared gap"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 120,
+    "scenario": "更新会议日志信息-roomId传空",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-121",
+    "enabled": true,
+    "api": "device.getSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 121,
+    "scenario": "备份系统参数原值-WEB_MEETING_CONTROL_ADDRESS",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-122",
+    "enabled": true,
+    "api": "device.getSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 122,
+    "scenario": "备份系统参数原值-fmServerLogLevel",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-123",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 123,
+    "scenario": "更新系统参数-RecordServerIP",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-124",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 124,
+    "scenario": "更新系统参数-RecordServerip默认127.0.0.1",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-125",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 125,
+    "scenario": "更新系统参数-WEB_MEETING_CONTROL_ADDRESS",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-126",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 126,
+    "scenario": "更新系统参数-fmServerLogLevel",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-127",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 127,
+    "scenario": "更新系统参数-paramValue传空",
+    "intentional_invalid": [
+      "paramValue"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-128",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 128,
+    "scenario": "还原系统参数-WEB_MEETING_CONTROL_ADDRESS",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-129",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 129,
+    "scenario": "还原系统参数-fmServerLogLevel",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "device-130",
+    "enabled": true,
+    "api": "device.updateSystemParam",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "system_param"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 130,
+    "scenario": "还原系统参数-emailhost",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-002",
+    "enabled": true,
+    "api": "room.getRoomInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 2,
+    "scenario": "查询会议室详情",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "roomId": "${env.room_id}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-003",
+    "enabled": true,
+    "api": "room.verifyRoomUser",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 3,
+    "scenario": "正确验证会议室用户",
+    "intentional_invalid": [],
+    "expected": {
+      "result": 0,
+      "roomId": "${env.room_id}",
+      "topDeptId": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-004",
+    "enabled": true,
+    "api": "room.verifyRoomUser",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 4,
+    "scenario": "验证会议室用户-必传字段roomid不传",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "verifyMode": 0,
+      "right": 0,
+      "result": -5,
+      "roomId": 0,
+      "topDeptId": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-005",
+    "enabled": true,
+    "api": "room.getRealRoomId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 5,
+    "scenario": "成功获取会议室id",
+    "intentional_invalid": [],
+    "expected": {
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-006",
+    "enabled": true,
+    "api": "room.getRealRoomId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 6,
+    "scenario": "获取会议室id-输入不存在的会议室id",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -5
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-007",
+    "enabled": true,
+    "api": "room.checkRoomRemainTime",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 7,
+    "scenario": "正确检查会议室保留时间",
+    "intentional_invalid": [],
+    "expected": {
+      "remainMinute": 1000,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-008",
+    "enabled": true,
+    "api": "room.checkRoomRemainTime",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 8,
+    "scenario": "检查会议室保留时间-错误的会议室id",
+    "intentional_invalid": [],
+    "expected": {
+      "remainMinute": 0,
+      "result": -13
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-009",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false
+  },
+  {
+    "case_id": "room-010",
+    "enabled": true,
+    "api": "room.confRoomStart",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 10,
+    "scenario": "成功开启会议室",
+    "intentional_invalid": [],
+    "expected": {
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-011",
+    "enabled": true,
+    "api": "room.confRoomStart",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 11,
+    "scenario": "开启会议室-缺少文档必填serviceId应拒绝",
+    "intentional_invalid": [
+      "serviceId"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-012",
+    "enabled": true,
+    "api": "room.confRoomStop",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 12,
+    "scenario": "成功关闭会议室",
+    "intentional_invalid": [],
+    "expected": {
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-013",
+    "enabled": true,
+    "api": "room.confRoomStop",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 13,
+    "scenario": "关闭会议室-不传serviceid",
+    "intentional_invalid": [
+      "serviceId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-014",
+    "enabled": true,
+    "api": "room.confRoomStop",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 14,
+    "scenario": "关闭会议室-serviceid与开启时不一致",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -8,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-015",
+    "enabled": true,
+    "api": "room.confUserLogin2",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 15,
+    "scenario": "用户成功登录会议室",
+    "intentional_invalid": [],
+    "expected": {
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-016",
+    "enabled": true,
+    "api": "room.confUserLogin2",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 16,
+    "scenario": "用户登录会议室-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 4107
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-017",
+    "enabled": true,
+    "api": "room.confUserLogin2",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 17,
+    "scenario": "用户登录会议室-不传serviceid",
+    "intentional_invalid": [
+      "serviceId"
+    ],
+    "expected": {
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-018",
+    "enabled": true,
+    "api": "room.getRealRoomId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 18,
+    "scenario": "成功获取真实房间id",
+    "intentional_invalid": [],
+    "expected": {
+      "realRoomId": 10000,
+      "result": 0,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-019",
+    "enabled": true,
+    "api": "room.getRealRoomId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 19,
+    "scenario": "获取真实房间id-传不存在的id",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -5
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-020",
+    "enabled": true,
+    "api": "room.getRealRoomId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 20,
+    "scenario": "获取真实房间id-不传id",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "result": -5
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-021",
+    "enabled": true,
+    "api": "room.getRecordRoomCfg",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 21,
+    "scenario": "成功获取录制房间配置",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "globalSwitch": "${env.record_global_switch}",
+      "enableExtFullRecord": false
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-022",
+    "enabled": true,
+    "api": "room.getRecordRoomCfg",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 22,
+    "scenario": "获取录制房间配置-c传不存在的房间id",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-023",
+    "enabled": true,
+    "api": "room.getRecordRoomCfg",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 23,
+    "scenario": "获取录制房间配置-不传id",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-024",
+    "enabled": true,
+    "api": "room.getRoomCompanyId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 24,
+    "scenario": "成功获取房间公司id",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-025",
+    "enabled": true,
+    "api": "room.getRoomCompanyId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 25,
+    "scenario": "获取房间公司id-传不存在的房间id",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-026",
+    "enabled": true,
+    "api": "room.getRoomCompanyId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 26,
+    "scenario": "获取房间公司id-不传id",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-027",
+    "enabled": true,
+    "api": "room.getRoomCurDevId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 27,
+    "scenario": "成功获取房间当前设备id",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-028",
+    "enabled": true,
+    "api": "room.getRoomCurDevId",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 28,
+    "scenario": "获取房间当前设备id-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "result": -1,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-029",
+    "enabled": true,
+    "api": "room.getRoomCurDevId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Business-code structure checked; undefined branch semantics remain unclaimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 29,
+    "scenario": "获取房间当前设备id-不传roomNodeid",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-030",
+    "enabled": true,
+    "api": "room.getRoomDeptList2",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 30,
+    "scenario": "成功获取房间部门列表2",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-031",
+    "enabled": true,
+    "api": "room.getRoomDeptList2",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 31,
+    "scenario": "获取房间部门列表2-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-032",
+    "enabled": true,
+    "api": "room.getRoomDeptList2",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 32,
+    "scenario": "获取房间部门列表2-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-033",
+    "enabled": true,
+    "api": "room.getRoomInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 33,
+    "scenario": "成功获取房间信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "roomId": "${env.room_id}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-034",
+    "enabled": true,
+    "api": "room.getRoomInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 34,
+    "scenario": "获取房间信息-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-035",
+    "enabled": true,
+    "api": "room.getRoomInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 35,
+    "scenario": "获取房间信息-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-036",
+    "enabled": true,
+    "api": "room.getRoomInviteCode",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 36,
+    "scenario": "成功获取房间邀请码",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "enableInvite": true
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-037",
+    "enabled": true,
+    "api": "room.getRoomInviteCode",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 37,
+    "scenario": "获取房间邀请码-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-038",
+    "enabled": true,
+    "api": "room.getRoomInviteCode",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 38,
+    "scenario": "获取房间邀请码-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-039",
+    "enabled": true,
+    "api": "room.getRoomSettings",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "PDF p65-66 exact documented fields; old waiting-room defaults are environment-specific"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 39,
+    "scenario": "成功获取房间设置",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "roomId": "${env.room_id}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-040",
+    "enabled": true,
+    "api": "room.getRoomSettings",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "PDF p65-66 exact documented fields; old waiting-room defaults are environment-specific"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 40,
+    "scenario": "获取房间设置-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-REQUIRED-ROOM",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-041",
+    "enabled": true,
+    "api": "room.getRoomSettings",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "PDF p65-66 exact documented fields; old waiting-room defaults are environment-specific"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 41,
+    "scenario": "获取房间设置-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-042",
+    "enabled": true,
+    "api": "room.getRoomUserList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 42,
+    "scenario": "成功获取房间用户列表",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-043",
+    "enabled": true,
+    "api": "room.getRoomUserList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 43,
+    "scenario": "获取房间用户列表-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "data": [],
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-044",
+    "enabled": true,
+    "api": "room.getRoomUserList",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 44,
+    "scenario": "获取房间用户列表-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "data": [],
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-045",
+    "enabled": true,
+    "api": "room.getSvrNodeIdByRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 45,
+    "scenario": "成功通过房间路由获取服务器节点ID",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-046",
+    "enabled": true,
+    "api": "room.getSvrNodeIdByRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 46,
+    "scenario": "通过房间路由获取服务器节点ID-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-047",
+    "enabled": true,
+    "api": "room.getSvrNodeIdByRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 47,
+    "scenario": "通过房间路由获取服务器节点ID-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-048",
+    "enabled": true,
+    "api": "room.meetingLog",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 48,
+    "scenario": "新增会议日志成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-049",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false
+  },
+  {
+    "case_id": "room-050",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false
+  },
+  {
+    "case_id": "room-051",
+    "enabled": true,
+    "api": "room.requestChairRight",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 51,
+    "scenario": "成功请求主席权限",
+    "intentional_invalid": [],
+    "expected": {
+      "result": 0,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-052",
+    "enabled": true,
+    "api": "room.requestChairRight",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 52,
+    "scenario": "请求主席权限-传错误的密码",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -70,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-053",
+    "enabled": true,
+    "api": "room.requestChairRight",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 53,
+    "scenario": "请求主席权限-不传密码",
+    "intentional_invalid": [
+      "password"
+    ],
+    "expected": {
+      "resultCode": 4107
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-054",
+    "enabled": true,
+    "api": "room.requestChairRight",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 54,
+    "scenario": "请求主席权限-传正确的密码不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "result": -5,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-055",
+    "enabled": true,
+    "api": "room.requestChairRight",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 55,
+    "scenario": "请求主席权限-传正确的密码和不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -5,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-056",
+    "enabled": true,
+    "api": "room.updateRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 56,
+    "scenario": "成功更新房间路由",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-057",
+    "enabled": true,
+    "api": "room.getRoomRouteInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Read the independently prepared route by its complete identity"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 57,
+    "scenario": "成功获取房间路由信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "svrAddress": "${fixture.address}",
+      "svrAuthCode": "${fixture.auth_code}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-058",
+    "enabled": true,
+    "api": "room.getRoomRouteInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 58,
+    "scenario": "获取房间路由信息-错误的svrAppid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 4107
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-059",
+    "enabled": true,
+    "api": "room.getRoomRouteInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 59,
+    "scenario": "获取房间路由信息-错误的svrNodeid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 4107
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-060",
+    "enabled": true,
+    "api": "room.getRoomRouteInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 60,
+    "scenario": "获取房间路由信息-错误的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 4107
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-061",
+    "enabled": true,
+    "api": "room.getRoomRouteInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 61,
+    "scenario": "获取房间路由信息-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 4107
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-062",
+    "enabled": true,
+    "api": "room.updateRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "User clarified developer-confirmed design on 2026-10-19: use current deployed behavior for these seven scenarios; both route methods reject nonexistent rooms with 4108. Retain independent business-state/identity verification.",
+    "source_row": 62,
+    "scenario": "更新路由-svrAppId为null拒绝且原路由不变",
+    "intentional_invalid": [
+      "svrAppId"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "CONTRACT-APP-DEFAULT",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-063",
+    "enabled": true,
+    "api": "room.updateRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 63,
+    "scenario": "更新房间路由-不传svrNodeid",
+    "intentional_invalid": [
+      "svrNodeId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-064",
+    "enabled": true,
+    "api": "room.updateRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 64,
+    "scenario": "更新房间路由-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-REQUIRED-ROOM",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-065",
+    "enabled": true,
+    "api": "room.updateRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "User clarified developer-confirmed design on 2026-10-19: use current deployed behavior for these seven scenarios; both route methods reject nonexistent rooms with 4108. Retain independent business-state/identity verification.",
+    "source_row": 65,
+    "scenario": "更新路由-不存在房间返回4108且原路由不变",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "CONTRACT-ROOM-EXISTENCE",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-066",
+    "enabled": true,
+    "api": "room.replaceRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 66,
+    "scenario": "成功替换房间路由",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-067",
+    "enabled": true,
+    "api": "room.replaceRoomRoute",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 67,
+    "scenario": "替换房间路由-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-REQUIRED-ROOM",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-068",
+    "enabled": true,
+    "api": "room.replaceRoomRoute",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "User clarified developer-confirmed design on 2026-10-19: use current deployed behavior for these seven scenarios; both route methods reject nonexistent rooms with 4108. Retain independent business-state/identity verification.",
+    "source_row": 68,
+    "scenario": "替换路由-不存在房间拒绝且原路由不变",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "CONTRACT-ROOM-EXISTENCE",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-069",
+    "enabled": true,
+    "api": "room.replaceRoomRoute",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "User clarified developer-confirmed design on 2026-10-19: use current deployed behavior for these seven scenarios; both route methods reject nonexistent rooms with 4108. Retain independent business-state/identity verification.",
+    "source_row": 69,
+    "scenario": "替换路由-svrAppId为null拒绝且原路由不变",
+    "intentional_invalid": [
+      "svrAppId"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "CONTRACT-APP-DEFAULT",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-070",
+    "enabled": true,
+    "api": "room.replaceRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p48 required field: reject before modifying the prepared route",
+    "source_row": 70,
+    "scenario": "替换房间路由-不传svrNodeid",
+    "intentional_invalid": [
+      "svrNodeId"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-ROUTE-ATOMICITY",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-071",
+    "enabled": true,
+    "api": "room.replaceRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p48 required field: reject before modifying the prepared route",
+    "source_row": 71,
+    "scenario": "替换房间路由-不传svrAddr",
+    "intentional_invalid": [
+      "svrAddress"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-ROUTE-ATOMICITY",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-072",
+    "enabled": true,
+    "api": "room.replaceRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p48 required field: reject before modifying the prepared route",
+    "source_row": 72,
+    "scenario": "替换房间路由-不传svrAuthCode",
+    "intentional_invalid": [
+      "svrAuthCode"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-ROUTE-ATOMICITY",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-073",
+    "enabled": true,
+    "api": "room.updateRoomRouteTime",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "route_time"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 73,
+    "scenario": "成功更新房间路由时间",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-074",
+    "enabled": true,
+    "api": "room.updateRoomRouteTime",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 74,
+    "scenario": "更新房间路由时间-不传svrAppid",
+    "intentional_invalid": [
+      "svrAppId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-075",
+    "enabled": true,
+    "api": "room.updateRoomRouteTime",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 75,
+    "scenario": "更新房间路由时间-不传svrNodeid",
+    "intentional_invalid": [
+      "svrNodeId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-076",
+    "enabled": true,
+    "api": "room.updateRoomRouteTime",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 76,
+    "scenario": "更新房间路由时间-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-077",
+    "enabled": true,
+    "api": "room.updateRoomRouteTime",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 77,
+    "scenario": "更新房间路由时间-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-078",
+    "enabled": true,
+    "api": "room.delRoomRoute",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "route"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 78,
+    "scenario": "成功删除会议室路由",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-079",
+    "enabled": true,
+    "api": "room.updateRoomUserState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "room_user"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 79,
+    "scenario": "成功更新房间用户状态-设置online为1",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-080",
+    "enabled": true,
+    "api": "room.updateRoomUserState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "room_user"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 80,
+    "scenario": "成功更新房间用户状态-设置online为0",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-081",
+    "enabled": true,
+    "api": "room.updateRoomUserState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 81,
+    "scenario": "更新房间用户状态-不传userid",
+    "intentional_invalid": [
+      "userId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-082",
+    "enabled": true,
+    "api": "room.updateRoomUserState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 82,
+    "scenario": "更新房间用户状态-不传online",
+    "intentional_invalid": [
+      "online"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-083",
+    "enabled": true,
+    "api": "room.updateRoomUserState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 83,
+    "scenario": "更新房间用户状态-设置online为其他",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-084",
+    "enabled": true,
+    "api": "room.updateRoomUserState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 84,
+    "scenario": "更新房间用户状态-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-085",
+    "enabled": true,
+    "api": "room.updateRoomUserState",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 85,
+    "scenario": "更新房间用户状态-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-086",
+    "enabled": true,
+    "api": "room.updateRoomInfoByRoomId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "room_count"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 86,
+    "scenario": "成功通过房间ID更新房间信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-087",
+    "enabled": true,
+    "api": "room.updateRoomInfoByRoomId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "room"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 87,
+    "scenario": "通过房间ID更新房间信息-传非法的curUserCount",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-088",
+    "enabled": true,
+    "api": "room.updateRoomInfoByRoomId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 88,
+    "scenario": "通过房间ID更新房间信息-不传curUserCount",
+    "intentional_invalid": [
+      "request"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-089",
+    "enabled": true,
+    "api": "room.updateRoomInfoByRoomId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 89,
+    "scenario": "通过房间ID更新房间信息-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-090",
+    "enabled": true,
+    "api": "room.updateRoomInfoByRoomId",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 90,
+    "scenario": "通过房间ID更新房间信息-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-091",
+    "enabled": true,
+    "api": "room.getCDNInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 91,
+    "scenario": "获取CDN信息成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-092",
+    "enabled": true,
+    "api": "room.getCDNInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 92,
+    "scenario": "获取CDN信息-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-093",
+    "enabled": true,
+    "api": "room.getCDNInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 93,
+    "scenario": "获取CDN信息成功-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-094",
+    "enabled": true,
+    "api": "room.getRoomH323SettingsInfo",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 94,
+    "scenario": "成功获取房间H323设置信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-095",
+    "enabled": true,
+    "api": "room.getRoomH323SettingsInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 95,
+    "scenario": "获取H323设置信息-不传roomId",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-096",
+    "enabled": true,
+    "api": "room.getRoomH323SettingsInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 96,
+    "scenario": "获取H323设置信息-传不存在的roomId",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "room-097",
+    "enabled": true,
+    "api": "room.getRoomH323SettingsInfo",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 97,
+    "scenario": "获取H323设置信息-不传入devId",
+    "intentional_invalid": [
+      "devId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-002",
+    "enabled": true,
+    "api": "user.getRecordUserName",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 2,
+    "scenario": "成功获取录制用户名",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "userName": "${env.username}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-003",
+    "enabled": true,
+    "api": "user.getRecordUserName",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 3,
+    "scenario": "获取录制用户名-传不存在的用户名",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-004",
+    "enabled": true,
+    "api": "user.getRecordUserName",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 4,
+    "scenario": "获取录制用户名-不传用户名",
+    "intentional_invalid": [
+      "userId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-005",
+    "enabled": true,
+    "api": "user.getUserRole",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 5,
+    "scenario": "成功获取用户角色",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-006",
+    "enabled": true,
+    "api": "user.getUserRole",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 6,
+    "scenario": "获取用户角色-传不存在的用户名",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-007",
+    "enabled": true,
+    "api": "user.getUserRole",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 7,
+    "scenario": "获取用户角色-不传用户名",
+    "intentional_invalid": [
+      "userId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-008",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "user"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 8,
+    "scenario": "成功更新用户信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-009",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "user"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p77 does not define phone/email format validation. Verify string persistence and unrelated-field preservation; do not claim these strings satisfy a business format policy.",
+    "source_row": 9,
+    "scenario": "更新用户信息-mobile非标准号段按字符串保存并回查",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "behavior_baseline",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-010",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "user"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p77 does not define phone/email format validation. Verify string persistence and unrelated-field preservation; do not claim these strings satisfy a business format policy.",
+    "source_row": 10,
+    "scenario": "更新用户信息-mobile为10位字符串保存并回查",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "behavior_baseline",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-011",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "user"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p77 does not define phone/email format validation. Verify string persistence and unrelated-field preservation; do not claim these strings satisfy a business format policy.",
+    "source_row": 11,
+    "scenario": "更新用户信息-mail无分隔符字符串保存并回查",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "behavior_baseline",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-012",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "user"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p77 does not define phone/email format validation. Verify string persistence and unrelated-field preservation; do not claim these strings satisfy a business format policy.",
+    "source_row": 12,
+    "scenario": "更新用户信息-tel为5位字符串保存并回查",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "behavior_baseline",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-013",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "user"
+    },
+    "topology": "any",
+    "contract_issue": "PDF p77 does not define phone/email format validation. Verify string persistence and unrelated-field preservation; do not claim these strings satisfy a business format policy.",
+    "source_row": 13,
+    "scenario": "更新用户信息-tel为33位字符串保存并回查",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "behavior_baseline",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-014",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "user"
+    },
+    "topology": "any",
+    "contract_issue": "Deployed 2026-10-16 UserSex accepts only 0/1; invalid sex is rejected with 4108 before SQL. Keep independent unchanged-state verification.",
+    "source_row": 14,
+    "scenario": "更新用户信息-sex超出目标字段长度，拒绝且资料不变",
+    "intentional_invalid": [
+      "sex"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-015",
+    "enabled": true,
+    "api": "user.updateUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "user"
+    },
+    "topology": "any",
+    "contract_issue": "Configured nonempty_fields update mode: deployed Processor validates nonempty sex, DAO ignores missing nickname. Preserve original nickname and verify the requested telephone change; invalid sex must not masquerade as missing-nickname validation.",
+    "source_row": 15,
+    "scenario": "局部更新省略nickName，保留原昵称且指定电话更新成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "BUG-REQUIRED-NICKNAME",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-016",
+    "enabled": true,
+    "api": "user.verifyUser",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 16,
+    "scenario": "验证用户成功",
+    "intentional_invalid": [],
+    "expected": {
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-017",
+    "enabled": true,
+    "api": "user.verifyUser",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 17,
+    "scenario": "验证用户-不传nodeid",
+    "intentional_invalid": [
+      "nodeId"
+    ],
+    "expected": {
+      "localUserId": 0,
+      "nickname": "",
+      "role": "0",
+      "result": -2,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-018",
+    "enabled": true,
+    "api": "user.verifyUser",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 18,
+    "scenario": "验证用户-不传logintype",
+    "intentional_invalid": [
+      "loginType"
+    ],
+    "expected": {
+      "localUserId": 0,
+      "nickname": "",
+      "role": "0",
+      "result": -1,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-019",
+    "enabled": true,
+    "api": "user.verifyUser",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 19,
+    "scenario": "验证用户-不传name",
+    "intentional_invalid": [
+      "name"
+    ],
+    "expected": {
+      "localUserId": 0,
+      "nickname": "",
+      "role": "0",
+      "result": -2,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-020",
+    "enabled": true,
+    "api": "user.verifyUser",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "response",
+      "reason": "Developer confirmed loginType=1 identity lookup without password validation; expected ID/nickname come from a read-only DB fixture. Upstream authentication is not claimed."
+    },
+    "topology": "any",
+    "contract_issue": "User clarified developer-confirmed design on 2026-10-19: use current deployed behavior for these seven scenarios; both route methods reject nonexistent rooms with 4108. Retain independent business-state/identity verification.",
+    "source_row": 20,
+    "scenario": "用户身份查询-按设计省略password仍返回匹配用户",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0,
+      "localUserId": "${env.user_id}",
+      "nickname": "${fixture.nickname}"
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "CONTRACT-AUTH-RESPONSIBILITY",
+    "original_enabled": true
+  },
+  {
+    "case_id": "user-021",
+    "enabled": false,
+    "api": "user.addFaceRollCallUser",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "source_row": 21,
+    "scenario": "成功添加人脸点名用户",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-022",
+    "enabled": false,
+    "api": "user.addFaceRollCallUser",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "source_row": 22,
+    "scenario": "添加人脸点名用户-不传rollCaiiid",
+    "intentional_invalid": [
+      "request"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-023",
+    "enabled": false,
+    "api": "user.addFaceRollCallUser",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "face_members"
+    },
+    "topology": "any",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "source_row": 23,
+    "scenario": "添加人脸点名用户-不传faceid",
+    "intentional_invalid": [
+      "request"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-REQUIRED-FACE",
+    "original_enabled": true,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-024",
+    "enabled": false,
+    "api": "user.getFaceUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "source_row": 24,
+    "scenario": "成功获取人脸用户信息",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-025",
+    "enabled": false,
+    "api": "user.getFaceUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "source_row": 25,
+    "scenario": "获取人脸用户信息-传不存在的faceid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-026",
+    "enabled": false,
+    "api": "user.getFaceUserInfo",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "contract",
+      "reason": "Invocation contract only; business effect is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "source_row": 26,
+    "scenario": "获取人脸用户信息-不传faceid",
+    "intentional_invalid": [
+      "faceId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-027",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-028",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-029",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-030",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-031",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-032",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-033",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "user-034",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false,
+    "scope_status": "retired",
+    "retirement_reason": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归",
+    "api": "user.insertIntoFaceRollCall",
+    "contract_issue": "人脸已迁出本数据库网关；旧接口保留历史，不纳入当前回归"
+  },
+  {
+    "case_id": "file-002",
+    "enabled": true,
+    "api": "file.addFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 2,
+    "scenario": "添加文件成功1",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-003",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false
+  },
+  {
+    "case_id": "file-004",
+    "enabled": true,
+    "api": "file.delDir",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "开发2026-10-15确认SQL绑定缺陷；缺参应拒绝且状态不变，建议的4108尚未定为正式错误码，不将其排除",
+    "source_row": 4,
+    "scenario": "删除目录-不传docid",
+    "intentional_invalid": [
+      "docId"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-DEL-DIR-SQL",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-005",
+    "enabled": true,
+    "api": "file.delDir",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "开发2026-10-15确认SQL绑定缺陷；缺参应拒绝且状态不变，建议的4108尚未定为正式错误码，不将其排除",
+    "source_row": 5,
+    "scenario": "删除目录-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {},
+    "expected_outcome": "rejected",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-DEL-DIR-SQL",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-006",
+    "enabled": true,
+    "api": "file.delDir",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "开发2026-10-15确认现有实现忽略DELETE影响行数，目标不存在按幂等0基线验证；产品如修订契约再调整；不得误删其他目标",
+    "source_row": 6,
+    "scenario": "删除目录-目标docId不存在，幂等成功且原目录不变",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-DEL-DIR-SQL",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-007",
+    "enabled": true,
+    "api": "file.delDir",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "开发2026-10-15确认现有实现忽略DELETE影响行数，目标不存在按幂等0基线验证；产品如修订契约再调整；不得误删其他目标",
+    "source_row": 7,
+    "scenario": "删除目录-目标roomId不存在，幂等成功且原目录不变",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "backend_defect",
+    "issue_id": "BUG-DEL-DIR-SQL",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-008",
+    "enabled": false,
+    "scope": "disabled",
+    "original_enabled": false
+  },
+  {
+    "case_id": "file-009",
+    "enabled": true,
+    "api": "file.delFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 9,
+    "scenario": "删除文件-不传docid",
+    "intentional_invalid": [
+      "docId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-010",
+    "enabled": true,
+    "api": "file.delFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 10,
+    "scenario": "删除文件-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-011",
+    "enabled": true,
+    "api": "file.delFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 11,
+    "scenario": "删除文件-传不存在的docid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-012",
+    "enabled": true,
+    "api": "file.delFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 12,
+    "scenario": "删除文件-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-013",
+    "enabled": true,
+    "api": "file.delFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 13,
+    "scenario": "删除文件成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-014",
+    "enabled": true,
+    "api": "file.getRoomFileList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Prepared file must appear in this room's result"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 14,
+    "scenario": "获取房间文件列表成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-015",
+    "enabled": true,
+    "api": "file.getRootDirList",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 15,
+    "scenario": "获取根目录列表成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-016",
+    "enabled": true,
+    "api": "file.getUselessFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "response",
+      "reason": "Exact response contract; persistence is not claimed"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 16,
+    "scenario": "获取无用文件成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-017",
+    "enabled": true,
+    "api": "file.moveDocFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 17,
+    "scenario": "移动文档文件成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-018",
+    "enabled": true,
+    "api": "file.moveDocFile",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 18,
+    "scenario": "移动文档文件-不传docid",
+    "intentional_invalid": [
+      "docId"
+    ],
+    "expected": {
+      "result": -9,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-019",
+    "enabled": true,
+    "api": "file.moveDocFile",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 19,
+    "scenario": "移动文档文件-不传roomid",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "result": -9,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-020",
+    "enabled": true,
+    "api": "file.moveDocFile",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "db",
+      "sql": "SELECT ParentID FROM t_roomdocslist WHERE RoomID=%s AND DocID=%s",
+      "params": [
+        "${env.room_id}",
+        "${fixture.doc_id}"
+      ],
+      "assertions": [
+        {
+          "path": "$",
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": "$[0].ParentID",
+          "op": "eq",
+          "value": ""
+        }
+      ]
+    },
+    "topology": "any",
+    "contract_issue": "Current-version baseline: omitted parentId moves to root; independently confirmed from a non-root fixture on 2026-10-16. Not one of the four 4108 contracts in the developer screenshot.",
+    "source_row": 20,
+    "scenario": "移动文档-省略parentId按当前版本默认根目录处理",
+    "intentional_invalid": [
+      "parentId"
+    ],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "behavior_baseline",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-021",
+    "enabled": true,
+    "api": "file.moveDocFile",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 21,
+    "scenario": "移动文档文件-传错误的docid",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -9,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-022",
+    "enabled": true,
+    "api": "file.moveDocFile",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 22,
+    "scenario": "移动文档文件-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "result": -9,
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-023",
+    "enabled": true,
+    "api": "file.moveDocFile",
+    "previous_code_only": false,
+    "scope": {
+      "kind": "state",
+      "checker": "file",
+      "preserve_other_fields": true
+    },
+    "topology": "any",
+    "contract_issue": "User clarified developer-confirmed design on 2026-10-19: use current deployed behavior for these seven scenarios; both route methods reject nonexistent rooms with 4108. Retain independent business-state/identity verification.",
+    "source_row": 23,
+    "scenario": "移动目录-按设计写入指定parentId并保留其他文件字段",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0,
+      "result": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "CONTRACT-PARENT-EXISTENCE",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-024",
+    "enabled": true,
+    "api": "file.renameFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 24,
+    "scenario": "重命名文件成功",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-025",
+    "enabled": true,
+    "api": "file.renameFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "2026-10-19 validation contract: reject missing/null required input with 4108; retain independent state checks. serverType enumeration remains separate from null validation.",
+    "source_row": 25,
+    "scenario": "重命名缺少docId，拒绝且原文件不变",
+    "intentional_invalid": [
+      "docId"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-026",
+    "enabled": true,
+    "api": "file.renameFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "2026-10-19 validation contract: reject missing/null required input with 4108; retain independent state checks. serverType enumeration remains separate from null validation.",
+    "source_row": 26,
+    "scenario": "重命名缺少roomId，拒绝且原文件不变",
+    "intentional_invalid": [
+      "roomId"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-027",
+    "enabled": true,
+    "api": "file.renameFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "Developer confirmed 2026-10-19: invalid input returns 4108; 4107 is reserved for unexpected system/database failures.",
+    "source_row": 27,
+    "scenario": "重命名缺少docName，拒绝且原文件名不变",
+    "intentional_invalid": [
+      "docName",
+      "name"
+    ],
+    "expected": {
+      "resultCode": 4108
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-028",
+    "enabled": true,
+    "api": "file.renameFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 28,
+    "scenario": "重命名文件-传错误的docid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  },
+  {
+    "case_id": "file-029",
+    "enabled": true,
+    "api": "file.renameFile",
+    "previous_code_only": true,
+    "scope": {
+      "kind": "state",
+      "checker": "no_change",
+      "target": "file"
+    },
+    "topology": "any",
+    "contract_issue": "",
+    "source_row": 29,
+    "scenario": "重命名文件-传不存在的roomid",
+    "intentional_invalid": [],
+    "expected": {
+      "resultCode": 0
+    },
+    "expected_outcome": "exact",
+    "test_group": "regression",
+    "issue_id": "",
+    "original_enabled": true
+  }
+]

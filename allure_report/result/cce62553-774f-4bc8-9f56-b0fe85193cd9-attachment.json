@@ -1,9 +1,0 @@
-{
-  "requestId": "file.getRoomFileList-1774000265028",
-  "className": "file",
-  "methodName": "getRoomFileList",
-  "params": {
-    "roomid": 10000
-  },
-  "timestamp": "2026-03-20 17:51:05"
-}

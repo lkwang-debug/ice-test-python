@@ -1,7 +1,0 @@
-{
-  "deviceId": "meeting2",
-  "srvAppId": 11,
-  "srvName": "FMConfSrv",
-  "state": 1,
-  "srvAddress": "${device_getServiceList.response.data.0.serviceAddress}"
-}

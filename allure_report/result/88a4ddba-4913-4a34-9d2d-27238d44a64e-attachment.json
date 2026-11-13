@@ -1,9 +1,0 @@
-{
-  "requestId": "device.getSubNodeList-1774000263510",
-  "className": "device",
-  "methodName": "getSubNodeList",
-  "params": {
-    "nodeId": null
-  },
-  "timestamp": "2026-03-20 17:51:03"
-}

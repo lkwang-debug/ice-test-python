@@ -1,9 +1,0 @@
-{
-  "requestId": "device.getDevVerifyCode-1774000263529",
-  "className": "device",
-  "methodName": "getDevVerifyCode",
-  "params": {
-    "devId": "meeting2"
-  },
-  "timestamp": "2026-03-20 17:51:03"
-}

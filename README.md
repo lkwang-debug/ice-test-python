@@ -1,4 +1,29 @@
-**# ICE自动化测试框架 README**
+# ICE 自动化测试框架
+
+## 从GitHub获取项目
+
+```powershell
+# Windows使用64位Python 3.10，安装ZeroC Ice及框架最小依赖
+python -m pip install -r requirements.txt
+Copy-Item common/config.example.py common/config.py
+```
+
+已有本地配置不要覆盖。实际服务器、设备、用户及SSH密码只填写在本地`common/config.py`，真实配置不提交到Git。仓库包含ICE定义、必要的生成适配代码、最新Excel用例、框架、离线检查和维护工具；历史Allure报告、缓存、排查记录、打包产物及含硬编码凭据的一次性脚本不再出现在最新版。
+
+开发期需要读取接口PDF时，额外安装`requirements-dev.txt`，并自行准备文档及迁移工具要求的原始工作簿备份。生产依赖不使用原开发机的大型pip freeze快照。
+
+```powershell
+# 仅本地框架检查，不连接真实网关或数据库
+python -X utf8 -m pytest tests/unit -q
+```
+
+当前执行方式、单/双设备 profile、严格断言、只读数据库校验和业务流程维护说明见 [数据库网关测试维护与运行](docs/gateway-testing.md)。
+
+快速检查：`python -m pytest tests/unit -q`。
+
+实时执行：`python run.py`。唯一配置文件是 `common/config.py`：服务器IP只改顶部 `SERVER_HOST`，ICE与SSH共用；其余参数、Excel和报告路径统一在 `TEST_CONFIG`。根目录旧INI已删除。当前地址为192.168.6.160、单meeting；旧网关人脸接口默认停用，CDN/电话网关关闭。Excel每个sheet的A列 `auto` 控制逐条执行：True参与收集，False不加载；已冻结表头和A列。
+
+以下内容保留为旧版使用说明；其中 `partial_validation`、`save_response` 和 `${previous_api.response.field}` 已由场景级引用及精确断言替代，请以新文档为准。
 
 
 # 框架介绍

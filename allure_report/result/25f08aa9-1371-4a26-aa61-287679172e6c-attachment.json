@@ -1,9 +1,0 @@
-{
-  "requestId": "device.frontGetParentNodeInfo-1774000263267",
-  "className": "device",
-  "methodName": "frontGetParentNodeInfo",
-  "params": {
-    "localNodeId": 386619
-  },
-  "timestamp": "2026-03-20 17:51:03"
-}

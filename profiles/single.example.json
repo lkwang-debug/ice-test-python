@@ -1,0 +1,35 @@
+{
+  "host": "127.0.0.1",
+  "locator_port": 22000,
+  "version": "1.0",
+  "topology": "single",
+  "primary_device_id": "MainDev",
+  "room_id": null,
+  "user_id": null,
+  "username": "",
+  "user_password_env": "ICE_TEST_USER_PASSWORD",
+  "primary_verify_code_env": "ICE_DEVICE_VERIFY_CODE",
+  "exclusive": false,
+  "capabilities": [
+    "room",
+    "file",
+    "user",
+    "record_config"
+  ],
+  "record_global_switch": 0,
+  "file_parent_id": "",
+  "test_service_app_id": 54011,
+  "test_route_app_id": 54012,
+  "method_aliases": {
+    "device.getRoomDefDevId": "getRoomDefDevID"
+  },
+  "database": {
+    "backend": "ssh_mysql",
+    "host": "127.0.0.1",
+    "ssh_port": 22,
+    "user": "root",
+    "password_env": "ICE_SSH_PASSWORD",
+    "server_config": "/hst/meeting/IceDBProxy/config/application-mysql.yml",
+    "container": "hst-mysql"
+  }
+}

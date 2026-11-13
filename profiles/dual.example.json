@@ -1,0 +1,22 @@
+{
+  "host": "127.0.0.1",
+  "version": "1.0",
+  "topology": "dual",
+  "primary_device_id": "MainDev",
+  "secondary_device_id": "REPLACE_WITH_REAL_DEVICE_ID",
+  "room_id": null,
+  "user_id": null,
+  "username": "",
+  "exclusive": false,
+  "capabilities": [],
+  "test_service_app_id": 54011,
+  "test_route_app_id": 54012,
+  "database": {
+    "backend": "mysql",
+    "host": "REPLACE_WITH_DATABASE_HOST",
+    "port": 3306,
+    "name": "fastmeeting",
+    "user": "READ_ONLY_USER",
+    "password_env": "ICE_TEST_SSH_PASSWORD"
+  }
+}

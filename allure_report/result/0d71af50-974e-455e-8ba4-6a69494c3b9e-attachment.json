@@ -1,5 +1,0 @@
-{
-  "roomId": 10000,
-  "svrAppId": 11,
-  "svrNodeId": "${device_getServiceList.response.data.0.serviceAddress}"
-}

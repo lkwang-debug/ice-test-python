@@ -1,9 +1,0 @@
-{
-  "requestId": "file.delFile-1774000265003",
-  "className": "file",
-  "methodName": "delFile",
-  "params": {
-    "docId": "aaa-bbb"
-  },
-  "timestamp": "2026-03-20 17:51:05"
-}

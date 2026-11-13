@@ -1,0 +1,34 @@
+# 打包过程的下载缓存与 PyInstaller 中间产物
+.build_cache/
+
+# Windows 下偶尔出现的 JVM 崩溃日志
+hs_err_pid*.log
+
+# Local diagnostics and runtime artifacts.
+__pycache__/
+*.pyc
+.pytest_cache/
+.codex-temp/
+*.inspect.ndjson
+allure_report/
+allure-report*/
+allure-results*/
+allure_report*/
+allure_results*/
+analysis/
+outputs/
+logs/
+*.log
+.idea/
+.cursor/
+.venv*/
+common/config.py
+profiles/*.json
+!profiles/*.example.json
+station_ids.json
+batch_create_departments.py
+batch_department_biaopin.py
+create_stations.py
+edit_station_data.py
+terminal_create.py
+terminal_create_biaopin.py

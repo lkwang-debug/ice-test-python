@@ -1,4 +1,0 @@
-{
-  "status": null,
-  "nodeId": "${device_devRegister.response.devNodeId}"
-}

@@ -45,6 +45,12 @@ class CompanyMethods(BaseMethods):
 class DeviceMethods(BaseMethods):
     """设备相关接口"""
 
+    def update_service(self, params):
+        return self._invoke("device", "updateService", params)
+
+    def update_dev_info_status_by_dev_id(self, params):
+        return self._invoke("device", "updateDevInfoStatusByDevId", params)
+
     @allure.step("切换为从设备")
     def change_to_slave(self, params):
         return self._invoke("device", "changeToSlave", params)
@@ -249,6 +255,12 @@ class FileMethods(BaseMethods):
 class RoomMethods(BaseMethods):
     """房间相关接口"""
 
+    def delete_room_route_info(self, params):
+        return self._invoke("room", "deleteRoomRouteInfo", params)
+
+    def get_room_dept_list(self, params):
+        return self._invoke("room", "getRoomDeptList", params)
+
     @allure.step("检查房间剩余时间")
     def check_room_remain_time(self, params):
         return self._invoke("room", "checkRoomRemainTime", params)
@@ -371,6 +383,15 @@ class RoomMethods(BaseMethods):
 
 class UserMethods(BaseMethods):
     """用户相关接口"""
+
+    def update_face_info_by_face_id(self, params):
+        return self._invoke("user", "updateFaceInfoByFaceId", params)
+
+    def get_face_info_by_face_id(self, params):
+        return self._invoke("user", "getFaceInfoByFaceId", params)
+
+    def get_face_info_list(self, params):
+        return self._invoke("user", "getFaceInfoList", params)
 
     @allure.step("添加人脸点名用户")
     def add_face_roll_call_user(self, params):

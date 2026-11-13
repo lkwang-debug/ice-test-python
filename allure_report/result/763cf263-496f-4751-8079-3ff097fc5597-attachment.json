@@ -1,9 +1,0 @@
-{
-  "requestId": "device.getDevSipPhoneList-1774000263438",
-  "className": "device",
-  "methodName": "getDevSipPhoneList",
-  "params": {
-    "devId": "meeting2"
-  },
-  "timestamp": "2026-03-20 17:51:03"
-}

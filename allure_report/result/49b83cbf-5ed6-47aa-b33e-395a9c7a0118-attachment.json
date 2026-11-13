@@ -1,9 +1,0 @@
-{
-  "requestId": "device.getAppSrvList-1774000263370",
-  "className": "device",
-  "methodName": "getAppSrvList",
-  "params": {
-    "appId": null
-  },
-  "timestamp": "2026-03-20 17:51:03"
-}

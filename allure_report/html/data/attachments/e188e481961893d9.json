@@ -1,5 +1,0 @@
-{
-  "roomId": 10000,
-  "svrAppId": 11,
-  "svrNodeId": "NID:${device_getNodeList.response.data.0.nodeId}$DID:meeting2"
-}

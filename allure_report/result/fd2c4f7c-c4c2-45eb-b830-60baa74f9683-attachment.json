@@ -1,9 +1,0 @@
-{
-  "requestId": "user.addFaceRollCallUser-1774000264941",
-  "className": "user",
-  "methodName": "addFaceRollCallUser",
-  "params": {
-    "faceId": 1
-  },
-  "timestamp": "2026-03-20 17:51:04"
-}

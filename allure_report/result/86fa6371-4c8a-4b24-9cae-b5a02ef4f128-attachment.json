@@ -1,9 +1,0 @@
-{
-  "requestId": "device.serviceUnregister-1774000263706",
-  "className": "device",
-  "methodName": "serviceUnregister",
-  "params": {
-    "serviceId": 3
-  },
-  "timestamp": "2026-03-20 17:51:03"
-}

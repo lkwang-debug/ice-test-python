@@ -1,7 +1,0 @@
-{
-  "deviceId": "MainDev",
-  "srvAppId": 20,
-  "srvName": "FMFrontSrv",
-  "state": 1,
-  "srvAddress": "${device_getServiceList.response.data.1.serviceAddress}"
-}

@@ -1,9 +1,0 @@
-{
-  "requestId": "room.getRoomInviteCode-1774000264432",
-  "className": "room",
-  "methodName": "getRoomInviteCode",
-  "params": {
-    "roomId": null
-  },
-  "timestamp": "2026-03-20 17:51:04"
-}

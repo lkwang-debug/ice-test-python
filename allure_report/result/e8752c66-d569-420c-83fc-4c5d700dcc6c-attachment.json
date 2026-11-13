@@ -1,9 +1,0 @@
-{
-  "requestId": "device.getDevIdByRoomId-1774000263408",
-  "className": "device",
-  "methodName": "getDevIdByRoomId",
-  "params": {
-    "roomId": null
-  },
-  "timestamp": "2026-03-20 17:51:03"
-}

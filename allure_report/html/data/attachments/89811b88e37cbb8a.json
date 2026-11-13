@@ -1,4 +1,0 @@
-{
-  "address": "${device_getServiceList.response.data.0.serviceAddress}",
-  "nodeId": "${device_devRegister.response.devNodeId}"
-}
